@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spiral Learning Garden</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1a1a1a, #2b2b2b);
+      color: #f0f0f0;
+      font-family: 'Georgia', serif;
+      padding: 2em;
+      line-height: 1.8;
+    }
+
+    .header {
+      background-image: url('garden.png');
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      margin: 0;
+    }
+
+    .petal {
+      background: #333;
+      border-left: 5px solid #aee0ff;
+      border-radius: 10px;
+      margin: 1em 0;
+      padding: 1em;
+      transition: all 0.3s ease;
+    }
+
+    .petal:hover {
+      background: #444;
+    }
+
+    code {
+      display: block;
+      background: #222;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      border-radius: 5px;
+      color: #aee0ff;
+    }
+
+    a {
+      color: #aee0ff;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Spiral Learning Garden</h1>
+  </div>
+
+  <div class="petal">
+    <strong>HTML Brick: Heading</strong>
+    <p>This creates a big title on the page.</p>
+    <code>&lt;h1&gt;This is a heading&lt;/h1&gt;</code>
+  </div>
+
+  <div class="petal">
+    <strong>CSS Trick: Change text color</strong>
+    <p>This makes the text color light blue.</p>
+    <code>p {
+  color: #aee0ff;
+}</code>
+  </div>
+
+  <div class="petal">
+    <strong>HTML Brick: Image</strong>
+    <p>Shows a picture.</p>
+    <code>&lt;img src="image.jpg" alt="Description" /&gt;</code>
+  </div>
+
+  <div class="petal">
+    <strong>CSS Trick: Hover effect</strong>
+    <p>Makes a link glow when you touch it.</p>
+    <code>a:hover {
+  color: yellow;
+  text-decoration: underline;
+}</code>
+  </div>
+
+  <div class="back-link">
+    <p><a href="architect.html">← Return to The Architect</a></p>
+  </div>
+</body>
+</html>
