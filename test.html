@@ -34,7 +34,6 @@
   transform-origin: center;
 }
 
-/* Position petals in a circle */
 .petal1 { transform: rotate(0deg) translateY(-130px); left: 100px; top: 100px; }
 .petal2 { transform: rotate(72deg) translateY(-130px); left: 100px; top: 100px; }
 .petal3 { transform: rotate(144deg) translateY(-130px); left: 100px; top: 100px; }
@@ -42,14 +41,23 @@
 .petal5 { transform: rotate(288deg) translateY(-130px); left: 100px; top: 100px; }
 
 .stem-label {
-  width: 120px;
-  margin: 3em auto 0;
-  padding: 0.5em;
-  background-color: #444;
+  width: 2px;
+  height: 100px;
+  background-color: #6c5ce7;
+  margin: 3em auto 1em;
+  position: relative;
+}
+
+.stem-label::after {
+  content: 'Bloom 1: The Basics';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  font-size: 14px;
   color: #aee0ff;
-  border-radius: 10px;
-  writing-mode: vertical-rl;
-  text-align: center;
+  background-color: transparent;
+  padding: 0.2em 0.5em;
   font-style: italic;
 }
 
@@ -99,7 +107,7 @@
     <div class="petal petal3" onclick="showPopup('popup3')">Petal 3</div>
     <div class="petal petal4" onclick="showPopup('popup4')">Petal 4</div>
     <div class="petal petal5" onclick="showPopup('popup5')">Petal 5</div>
-  </div>  <div class="stem-label">Bloom 1: The Basics</div>  <!-- Popups for each petal -->  <div id="popup1" class="popup">
+  </div>  <div class="stem-label"></div>  <!-- Popups for each petal -->  <div id="popup1" class="popup">
     <p>Lesson 1: This is a lesson about headings and structure.</p>
     <button class="close-btn" onclick="hidePopup('popup1')">Close</button>
   </div>  <div id="popup2" class="popup">
