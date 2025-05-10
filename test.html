@@ -19,6 +19,7 @@
   justify-content: center;
   gap: 60px;
   margin-bottom: 4em;
+  flex-wrap: wrap;
 }
 
 .dot {
@@ -119,6 +120,7 @@
   <h1>Bloom Field</h1>  <div class="dot-field">
     <div class="dot" onclick="toggleFlower('flower1')"></div>
     <div class="dot" onclick="toggleFlower('flower2')"></div>
+    <div class="dot" onclick="toggleFlower('flower3')"></div>
   </div>  <!-- Flower 1 -->  <div id="flower1" class="flower">
     <div class="petal petal1" onclick="togglePopup('popup1')">Petal 1</div>
     <div class="petal petal2" onclick="togglePopup('popup2')">Petal 2</div>
@@ -127,21 +129,32 @@
     <div class="petal petal5" onclick="togglePopup('popup5')">Petal 5</div>
     <div class="center-label" onclick="hideFlower('flower1')">Bloom 1<br>The Basics</div>
   </div>  <!-- Flower 2 -->  <div id="flower2" class="flower">
-    <div class="petal petal1" onclick="togglePopup('popup6')">Petal A</div>
-    <div class="petal petal2" onclick="togglePopup('popup7')">Petal B</div>
-    <div class="petal petal3" onclick="togglePopup('popup8')">Petal C</div>
-    <div class="petal petal4" onclick="togglePopup('popup9')">Petal D</div>
-    <div class="petal petal5" onclick="togglePopup('popup10')">Petal E</div>
-    <div class="center-label" onclick="hideFlower('flower2')">Bloom 2<br>Coming Soon</div>
-  </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings</p></div>
-  <div id="popup2" class="popup"><p>Lesson 2: Colors</p></div>
-  <div id="popup3" class="popup"><p>Lesson 3: Images</p></div>
-  <div id="popup4" class="popup"><p>Lesson 4: Hover Effects</p></div>
-  <div id="popup5" class="popup"><p>Lesson 5: Buttons</p></div>  <!-- Popups for Flower 2 -->  <div id="popup6" class="popup"><p>Future lesson A</p></div>
-  <div id="popup7" class="popup"><p>Future lesson B</p></div>
-  <div id="popup8" class="popup"><p>Future lesson C</p></div>
-  <div id="popup9" class="popup"><p>Future lesson D</p></div>
-  <div id="popup10" class="popup"><p>Future lesson E</p></div>  <script>
+    <div class="petal petal1" onclick="togglePopup('popup6')">Links</div>
+    <div class="petal petal2" onclick="togglePopup('popup7')">Lists</div>
+    <div class="petal petal3" onclick="togglePopup('popup8')">Images</div>
+    <div class="petal petal4" onclick="togglePopup('popup9')">Blocks</div>
+    <div class="petal petal5" onclick="togglePopup('popup10')">Structure</div>
+    <div class="center-label" onclick="hideFlower('flower2')">Bloom 2<br>HTML Elements</div>
+  </div>  <!-- Flower 3 -->  <div id="flower3" class="flower">
+    <div class="petal petal1" onclick="togglePopup('popup11')">Hover</div>
+    <div class="petal petal2" onclick="togglePopup('popup12')">Transition</div>
+    <div class="petal petal3" onclick="togglePopup('popup13')">Border</div>
+    <div class="petal petal4" onclick="togglePopup('popup14')">Flex</div>
+    <div class="petal petal5" onclick="togglePopup('popup15')">Mobile</div>
+    <div class="center-label" onclick="hideFlower('flower3')">Bloom 3<br>Styling & Layout</div>
+  </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings define structure. Use h1–h6 tags to organize sections.</p></div>
+  <div id="popup2" class="popup"><p>Lesson 2: Color text or backgrounds using CSS color names or hex codes.</p></div>
+  <div id="popup3" class="popup"><p>Lesson 3: Add images with the &lt;img&gt; tag and control size in CSS.</p></div>
+  <div id="popup4" class="popup"><p>Lesson 4: Use :hover to add interactivity when a user touches or hovers.</p></div>
+  <div id="popup5" class="popup"><p>Lesson 5: Buttons can be &lt;button&gt; or &lt;a&gt; tags styled to look interactive.</p></div>  <!-- Popups for Flower 2 -->  <div id="popup6" class="popup"><p>Lesson 6: Use &lt;a href="url"&gt; to make clickable links.</p></div>
+  <div id="popup7" class="popup"><p>Lesson 7: Use &lt;ul&gt; and &lt;li&gt; for unordered lists, &lt;ol&gt; for ordered.</p></div>
+  <div id="popup8" class="popup"><p>Lesson 8: Images use the &lt;img&gt; tag. Don’t forget the alt attribute!</p></div>
+  <div id="popup9" class="popup"><p>Lesson 9: HTML is made of block and inline elements. Blocks stack, inlines wrap.</p></div>
+  <div id="popup10" class="popup"><p>Lesson 10: Structure your page with &lt;header&gt;, &lt;main&gt;, &lt;footer&gt;, etc.</p></div>  <!-- Popups for Flower 3 -->  <div id="popup11" class="popup"><p>Lesson 11: CSS hover effects make elements respond when touched or hovered.</p></div>
+  <div id="popup12" class="popup"><p>Lesson 12: CSS transitions smooth out changes like color or size over time.</p></div>
+  <div id="popup13" class="popup"><p>Lesson 13: Borders frame elements and can add visual emphasis.</p></div>
+  <div id="popup14" class="popup"><p>Lesson 14: Flexbox is a layout tool that helps space and align items easily.</p></div>
+  <div id="popup15" class="popup"><p>Lesson 15: Mobile responsiveness is about making your design adapt to small screens.</p></div>  <script>
     function toggleFlower(id) {
       const flower = document.getElementById(id);
       flower.style.display = (flower.style.display === 'block') ? 'none' : 'block';
