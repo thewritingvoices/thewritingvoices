@@ -80,6 +80,7 @@
   text-align: center;
   font-style: italic;
   box-shadow: 0 0 8px rgba(174, 224, 255, 0.3);
+  cursor: pointer;
 }
 
 .popup {
@@ -132,14 +133,14 @@
     <div class="petal petal3" onclick="showPopup('popup3')">Petal 3</div>
     <div class="petal petal4" onclick="showPopup('popup4')">Petal 4</div>
     <div class="petal petal5" onclick="showPopup('popup5')">Petal 5</div>
-    <div class="center-label">Bloom 1<br>The Basics</div>
+    <div class="center-label" onclick="hideFlower('flower1')">Bloom 1<br>The Basics</div>
   </div>  <!-- Flower 2 -->  <div id="flower2" class="flower">
     <div class="petal petal1" onclick="showPopup('popup6')">Petal A</div>
     <div class="petal petal2" onclick="showPopup('popup7')">Petal B</div>
     <div class="petal petal3" onclick="showPopup('popup8')">Petal C</div>
     <div class="petal petal4" onclick="showPopup('popup9')">Petal D</div>
     <div class="petal petal5" onclick="showPopup('popup10')">Petal E</div>
-    <div class="center-label">Bloom 2<br>Coming Soon</div>
+    <div class="center-label" onclick="hideFlower('flower2')">Bloom 2<br>Coming Soon</div>
   </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings</p><button class="close-btn" onclick="hidePopup('popup1')">Close</button></div>
   <div id="popup2" class="popup"><p>Lesson 2: Colors</p><button class="close-btn" onclick="hidePopup('popup2')">Close</button></div>
   <div id="popup3" class="popup"><p>Lesson 3: Images</p><button class="close-btn" onclick="hidePopup('popup3')">Close</button></div>
@@ -152,6 +153,9 @@
     function showFlower(id) {
       document.querySelectorAll('.flower').forEach(f => f.style.display = 'none');
       document.getElementById(id).style.display = 'block';
+    }
+    function hideFlower(id) {
+      document.getElementById(id).style.display = 'none';
     }
     function showPopup(id) {
       document.getElementById(id).style.display = 'block';
