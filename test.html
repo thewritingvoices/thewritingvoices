@@ -117,8 +117,8 @@
 </head>
 <body>
   <h1>Bloom Field</h1>  <div class="dot-field">
-    <div class="dot" onclick="showFlower('flower1')"></div>
-    <div class="dot" onclick="showFlower('flower2')"></div>
+    <div class="dot" onclick="toggleFlower('flower1')"></div>
+    <div class="dot" onclick="toggleFlower('flower2')"></div>
   </div>  <!-- Flower 1 -->  <div id="flower1" class="flower">
     <div class="petal petal1" onclick="showPopup('popup1')">Petal 1</div>
     <div class="petal petal2" onclick="showPopup('popup2')">Petal 2</div>
@@ -142,21 +142,23 @@
   <div id="popup8" class="popup"><p>Future lesson C</p></div>
   <div id="popup9" class="popup"><p>Future lesson D</p></div>
   <div id="popup10" class="popup"><p>Future lesson E</p></div>  <script>
-    function showFlower(id) {
-      document.querySelectorAll('.flower').forEach(f => f.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
+    function toggleFlower(id) {
+      const flower = document.getElementById(id);
+      flower.style.display = (flower.style.display === 'block') ? 'none' : 'block';
     }
+
     function hideFlower(id) {
       document.getElementById(id).style.display = 'none';
     }
+
     function showPopup(id) {
       document.getElementById(id).style.display = 'block';
     }
+
     function hidePopup(id) {
       document.getElementById(id).style.display = 'none';
     }
 
-    // Enable tap to close popups
     window.onload = function () {
       document.querySelectorAll('.popup').forEach(p => {
         p.addEventListener('click', () => {
