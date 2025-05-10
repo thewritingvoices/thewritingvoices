@@ -35,6 +35,13 @@
       border-radius: 5px;
       color: #aee0ff;
     }
+    .fade-in {
+      opacity: 0;
+      animation: fade 2s ease forwards;
+    }
+    @keyframes fade {
+      to { opacity: 1; }
+    }
     .back-button {
       display: block;
       width: fit-content;
@@ -110,6 +117,45 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }</code>
     <code>&lt;div class="box"&gt;I have depth now.&lt;/div&gt;</code>
+  </div>  <div class="petal">
+    <strong>Petal: Background Image</strong>
+    <p>Adds a full-page background image.</p>
+    <code>body {
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-position: center;
+}</code>
+  </div>  <div class="petal">
+    <strong>Petal: Italic and Bold</strong>
+    <p>Style your words for feeling or strength.</p>
+    <code>&lt;p&gt;&lt;em&gt;This is italic.&lt;/em&gt; &lt;strong&gt;This is bold.&lt;/strong&gt;&lt;/p&gt;</code>
+  </div>  <div class="petal">
+    <strong>Petal: List of Things</strong>
+    <p>Shows a simple bullet list.</p>
+    <code>&lt;ul&gt;
+  &lt;li&gt;Petal One&lt;/li&gt;
+  &lt;li&gt;Petal Two&lt;/li&gt;
+  &lt;li&gt;Petal Three&lt;/li&gt;
+&lt;/ul&gt;</code>
+  </div>  <div class="petal">
+    <strong>Petal: Link That Opens in New Tab</strong>
+    <p>Opens another website without leaving this one.</p>
+    <code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code>
+  </div>  <div class="petal">
+    <strong>Petal: Add Spacing Around a Box</strong>
+    <p>Gives your element room to breathe.</p>
+    <code>.box {
+  margin: 2em;
+  padding: 2em;
+}</code>
+  </div>  <div class="petal fade-in">
+    <strong>Petal: Fade-in Effect</strong>
+    <p>Fades a section in gently on load.</p>
+    <code>.fade-in {
+  opacity: 0;
+  animation: fade 2s ease forwards;
+}@keyframes fade { to { opacity: 1; } }</code> <code><div class="petal fade-in">Softly arriving...</div></code>
+
   </div><a href="architect.html" class="back-button">← Return to The Architect</a>
 
 </body>
