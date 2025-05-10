@@ -9,32 +9,46 @@
       background-color: #0d0d0d;
       color: #f4f4f4;
       font-family: Georgia, serif;
-      padding: 2rem;
+      margin: 0;
+    }
+
+    .header {
+      background-image: url('architect.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
       line-height: 1.7;
-      font-style: italic;
     }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
-      color: #aaa;
-    }
-    p {
-      font-size: 1em;
-      margin-bottom: 1em;
-    }
+
     a {
       color: #aee0ff;
     }
   </style>
 </head>
 <body>
-  <h1>The Architect</h1>
-  <p>This voice is resting.</p>
-
-  <p>The blueprints haven’t vanished. They’re folded, waiting, inked in breath and intention. The Architect is watching the shape of what you’re becoming.</p>
-
-  <p>When you’re ready to build differently, this voice will rise.</p>
-
-  <p><a href="index.html">← Back to The Writing Voices</a></p>
+  <div class="header">
+    <h1>The Architect</h1>
+  </div>
+  <div class="content">
+    <p>Laying blueprints in the marrow of your mind.</p>
+    <p>The Architect doesn't just plan—he encodes memory into infrastructure, story into structure.</p>
+    <p><a href="index.html">← Back to The Writing Voices</a></p>
+  </div>
 </body>
 </html>
