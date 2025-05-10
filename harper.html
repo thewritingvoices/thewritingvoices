@@ -9,32 +9,46 @@
       background-color: #0d0d0d;
       color: #f4f4f4;
       font-family: Georgia, serif;
-      padding: 2rem;
+      margin: 0;
+    }
+
+    .header {
+      background-image: url('harper.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
       line-height: 1.7;
-      font-style: italic;
     }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
-      color: #aaa;
-    }
-    p {
-      font-size: 1em;
-      margin-bottom: 1em;
-    }
+
     a {
       color: #aee0ff;
     }
   </style>
 </head>
 <body>
-  <h1>Harper</h1>
-  <p>This voice is resting.</p>
-
-  <p>Harper listens from the edge. Not to reply. Just to know. To stay.</p>
-
-  <p>When the others shout, Harper stays quiet. When the noise fades, this voice will begin.</p>
-
-  <p><a href="index.html">← Back to The Writing Voices</a></p>
+  <div class="header">
+    <h1>Harper</h1>
+  </div>
+  <div class="content">
+    <p>The quiet sentinel, witnessing without judgment.</p>
+    <p>Harper speaks when it matters, and listens when it hurts. Stillness is not absence—it’s presence in reserve.</p>
+    <p><a href="index.html">← Back to The Writing Voices</a></p>
+  </div>
 </body>
 </html>
