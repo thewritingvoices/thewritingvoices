@@ -120,18 +120,18 @@
     <div class="dot" onclick="toggleFlower('flower1')"></div>
     <div class="dot" onclick="toggleFlower('flower2')"></div>
   </div>  <!-- Flower 1 -->  <div id="flower1" class="flower">
-    <div class="petal petal1" onclick="showPopup('popup1')">Petal 1</div>
-    <div class="petal petal2" onclick="showPopup('popup2')">Petal 2</div>
-    <div class="petal petal3" onclick="showPopup('popup3')">Petal 3</div>
-    <div class="petal petal4" onclick="showPopup('popup4')">Petal 4</div>
-    <div class="petal petal5" onclick="showPopup('popup5')">Petal 5</div>
+    <div class="petal petal1" onclick="togglePopup('popup1')">Petal 1</div>
+    <div class="petal petal2" onclick="togglePopup('popup2')">Petal 2</div>
+    <div class="petal petal3" onclick="togglePopup('popup3')">Petal 3</div>
+    <div class="petal petal4" onclick="togglePopup('popup4')">Petal 4</div>
+    <div class="petal petal5" onclick="togglePopup('popup5')">Petal 5</div>
     <div class="center-label" onclick="hideFlower('flower1')">Bloom 1<br>The Basics</div>
   </div>  <!-- Flower 2 -->  <div id="flower2" class="flower">
-    <div class="petal petal1" onclick="showPopup('popup6')">Petal A</div>
-    <div class="petal petal2" onclick="showPopup('popup7')">Petal B</div>
-    <div class="petal petal3" onclick="showPopup('popup8')">Petal C</div>
-    <div class="petal petal4" onclick="showPopup('popup9')">Petal D</div>
-    <div class="petal petal5" onclick="showPopup('popup10')">Petal E</div>
+    <div class="petal petal1" onclick="togglePopup('popup6')">Petal A</div>
+    <div class="petal petal2" onclick="togglePopup('popup7')">Petal B</div>
+    <div class="petal petal3" onclick="togglePopup('popup8')">Petal C</div>
+    <div class="petal petal4" onclick="togglePopup('popup9')">Petal D</div>
+    <div class="petal petal5" onclick="togglePopup('popup10')">Petal E</div>
     <div class="center-label" onclick="hideFlower('flower2')">Bloom 2<br>Coming Soon</div>
   </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings</p></div>
   <div id="popup2" class="popup"><p>Lesson 2: Colors</p></div>
@@ -151,12 +151,9 @@
       document.getElementById(id).style.display = 'none';
     }
 
-    function showPopup(id) {
-      document.getElementById(id).style.display = 'block';
-    }
-
-    function hidePopup(id) {
-      document.getElementById(id).style.display = 'none';
+    function togglePopup(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
     }
 
     window.onload = function () {
