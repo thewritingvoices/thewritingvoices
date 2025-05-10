@@ -92,15 +92,7 @@
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.close-btn {
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  background: #444;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  cursor: pointer;
 }
 
 .back-button {
@@ -141,15 +133,15 @@
     <div class="petal petal4" onclick="showPopup('popup9')">Petal D</div>
     <div class="petal petal5" onclick="showPopup('popup10')">Petal E</div>
     <div class="center-label" onclick="hideFlower('flower2')">Bloom 2<br>Coming Soon</div>
-  </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings</p><button class="close-btn" onclick="hidePopup('popup1')">Close</button></div>
-  <div id="popup2" class="popup"><p>Lesson 2: Colors</p><button class="close-btn" onclick="hidePopup('popup2')">Close</button></div>
-  <div id="popup3" class="popup"><p>Lesson 3: Images</p><button class="close-btn" onclick="hidePopup('popup3')">Close</button></div>
-  <div id="popup4" class="popup"><p>Lesson 4: Hover Effects</p><button class="close-btn" onclick="hidePopup('popup4')">Close</button></div>
-  <div id="popup5" class="popup"><p>Lesson 5: Buttons</p><button class="close-btn" onclick="hidePopup('popup5')">Close</button></div>  <!-- Popups for Flower 2 -->  <div id="popup6" class="popup"><p>Future lesson A</p><button class="close-btn" onclick="hidePopup('popup6')">Close</button></div>
-  <div id="popup7" class="popup"><p>Future lesson B</p><button class="close-btn" onclick="hidePopup('popup7')">Close</button></div>
-  <div id="popup8" class="popup"><p>Future lesson C</p><button class="close-btn" onclick="hidePopup('popup8')">Close</button></div>
-  <div id="popup9" class="popup"><p>Future lesson D</p><button class="close-btn" onclick="hidePopup('popup9')">Close</button></div>
-  <div id="popup10" class="popup"><p>Future lesson E</p><button class="close-btn" onclick="hidePopup('popup10')">Close</button></div>  <script>
+  </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings</p></div>
+  <div id="popup2" class="popup"><p>Lesson 2: Colors</p></div>
+  <div id="popup3" class="popup"><p>Lesson 3: Images</p></div>
+  <div id="popup4" class="popup"><p>Lesson 4: Hover Effects</p></div>
+  <div id="popup5" class="popup"><p>Lesson 5: Buttons</p></div>  <!-- Popups for Flower 2 -->  <div id="popup6" class="popup"><p>Future lesson A</p></div>
+  <div id="popup7" class="popup"><p>Future lesson B</p></div>
+  <div id="popup8" class="popup"><p>Future lesson C</p></div>
+  <div id="popup9" class="popup"><p>Future lesson D</p></div>
+  <div id="popup10" class="popup"><p>Future lesson E</p></div>  <script>
     function showFlower(id) {
       document.querySelectorAll('.flower').forEach(f => f.style.display = 'none');
       document.getElementById(id).style.display = 'block';
@@ -162,6 +154,15 @@
     }
     function hidePopup(id) {
       document.getElementById(id).style.display = 'none';
+    }
+
+    // Enable tap to close popups
+    window.onload = function () {
+      document.querySelectorAll('.popup').forEach(p => {
+        p.addEventListener('click', () => {
+          p.style.display = 'none';
+        });
+      });
     }
   </script><a href="architect.html" class="back-button">← Return to The Architect</a>
 
