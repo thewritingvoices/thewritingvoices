@@ -9,33 +9,46 @@
       background-color: #0d0d0d;
       color: #f4f4f4;
       font-family: Georgia, serif;
-      padding: 2rem;
+      margin: 0;
+    }
+
+    .header {
+      background-image: url('camera.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
       line-height: 1.7;
     }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
-      color: #f8f8f8;
-    }
-    p {
-      font-size: 1em;
-      margin-bottom: 1em;
-    }
+
     a {
       color: #aee0ff;
     }
   </style>
 </head>
 <body>
-  <h1>Camera Obscura</h1>
-  <p><strong>Voice: Camera Obscura</strong></p>
-
-  <p>Through inversion, clarity. This page is a mirror-box, bending reality to reflect truth. Camera Obscura sees not what is shown, but what casts the shadow.</p>
-
-  <p>It speaks softly. It never yells. But you will see things differently after standing here awhile.</p>
-
-  <p>Distortion is sometimes a form of healing.</p>
-
-  <p><a href="index.html">← Back to The Writing Voices</a></p>
+  <div class="header">
+    <h1>Camera Obscura</h1>
+  </div>
+  <div class="content">
+    <p>Capturing truth through the lens of memory's distortion.</p>
+    <p>Where the light bends and shadows name themselves, Camera Obscura bears witness to what was almost missed.</p>
+    <p><a href="index.html">← Back to The Writing Voices</a></p>
+  </div>
 </body>
 </html>
