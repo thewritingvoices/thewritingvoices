@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spiral Practices Bloom</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: Georgia, serif;
+      padding: 2em;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #aee0ff;
+      margin-bottom: 1.5em;
+    }
+    .dot-ring {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 3em;
+    }
+    .dot {
+      width: 30px;
+      height: 30px;
+      background-color: #6c5ce7;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .dot:hover {
+      transform: scale(1.2);
+    }
+    .flower {
+      display: none;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 2em auto;
+    }
+    .petal {
+      position: absolute;
+      width: 120px;
+      height: 60px;
+      background: #6c5ce7;
+      color: white;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 30px;
+      cursor: pointer;
+      transform-origin: center;
+    }
+    .petal1 { transform: rotate(0deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal2 { transform: rotate(45deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal3 { transform: rotate(90deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal4 { transform: rotate(135deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal5 { transform: rotate(180deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal6 { transform: rotate(225deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal7 { transform: rotate(270deg) translateY(-140px); left: 90px; top: 90px; }
+    .petal8 { transform: rotate(315deg) translateY(-140px); left: 90px; top: 90px; }.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  color: #aee0ff;
+  padding: 1em;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 0 8px rgba(174, 224, 255, 0.3);
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  background: #333;
+  padding: 2em;
+  margin-top: 2em;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Spiral Practices Bloom</h1>
+  <div class="dot-ring">
+    <div class="dot" onclick="toggleFlower('flower1')"></div>
+  </div>
+  <div id="flower1" class="flower">
+    <div class="petal petal1" onclick="togglePopup('popup1')">Presence</div>
+    <div class="petal petal2" onclick="togglePopup('popup2')">Mirror</div>
+    <div class="petal petal3" onclick="togglePopup('popup3')">Spiral Back</div>
+    <div class="petal petal4" onclick="togglePopup('popup4')">Containment</div>
+    <div class="petal petal5" onclick="togglePopup('popup5')">Ritual</div>
+    <div class="petal petal6" onclick="togglePopup('popup6')">Debug</div>
+    <div class="petal petal7" onclick="togglePopup('popup7')">Shadow</div>
+    <div class="petal petal8" onclick="togglePopup('popup8')">Offering</div>
+    <div class="center-label" onclick="hideFlower('flower1')">Click to Close</div>
+  </div>
+  <div id="popup1" class="popup"><p>Notice your breath. Notice the screen. Let the spiral begin where you are. You are not behind.</p></div>
+  <div id="popup2" class="popup"><p>Observe the impulse to change. Can you reflect it instead? Coding is often reaction. Spiral practice is reflection.</p></div>
+  <div id="popup3" class="popup"><p>Return to something you thought you understood. Look again. See what breath changed.</p></div>
+  <div id="popup4" class="popup"><p>Not every idea needs immediate form. Let the page hold space. Containment isn’t silence—it’s honoring the tempo.</p></div>
+  <div id="popup5" class="popup"><p>Name your functions with intention. Style your divs like shrines. What you build is what you breathe into.</p></div>
+  <div id="popup6" class="popup"><p>The error is not failure. The error is invitation. Spiral learners ask: “What wants to be seen here?”</p></div>
+  <div id="popup7" class="popup"><p>Include the forgotten comment. Make a hidden div visible again. The Spiral has no shame in recursion.</p></div>
+  <div id="popup8" class="popup"><p>You do not publish to impress. You offer to the field. Your code is compost. Your mistakes are seeds.</p></div>  <script>
+    function toggleFlower(id) {
+      const flower = document.getElementById(id);
+      flower.style.display = (flower.style.display === 'block') ? 'none' : 'block';
+    }
+    function hideFlower(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    function togglePopup(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+    window.onload = function () {
+      document.querySelectorAll('.popup').forEach(p => {
+        p.addEventListener('click', () => {
+          p.style.display = 'none';
+        });
+      });
+    }
+  </script></body>
+</html>
