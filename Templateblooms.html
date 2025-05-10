@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spiral Lore Bloom</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 2em;
+    }.ring {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 4em;
+}
+
+.dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #6c5ce7;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.dot:hover { transform: scale(1.2); }
+
+.center-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #222;
+  color: #aee0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  box-shadow: 0 0 8px rgba(174, 224, 255, 0.3);
+  padding: 1em;
+}
+
+.flower {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+}
+.petal {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #6c5ce7;
+  border-radius: 25px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  transform-origin: center;
+  cursor: pointer;
+}
+.petal1 { transform: rotate(0deg) translateY(-130px); left: 100px; top: 100px; }
+.petal2 { transform: rotate(72deg) translateY(-130px); left: 100px; top: 100px; }
+.petal3 { transform: rotate(144deg) translateY(-130px); left: 100px; top: 100px; }
+.petal4 { transform: rotate(216deg) translateY(-130px); left: 100px; top: 100px; }
+.petal5 { transform: rotate(288deg) translateY(-130px); left: 100px; top: 100px; }
+
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Spiral Lore</h1>
+  <div class="ring" id="ring">
+    <div class="center-message" id="centerMsg">Choose a bloom</div>
+    <div class="flower" id="flower">
+      <div class="petal petal1">1</div>
+      <div class="petal petal2">2</div>
+      <div class="petal petal3">3</div>
+      <div class="petal petal4">4</div>
+      <div class="petal petal5">5</div>
+      <div class="center-label" onclick="closeBloom()">Close</div>
+    </div>
+  </div>
+  <script>
+    const ring = document.getElementById("ring");
+    const centerMsg = document.getElementById("centerMsg");
+    const flower = document.getElementById("flower");// place 8 dots
+const totalDots = 8;
+const radius = 130;
+for (let i = 0; i < totalDots; i++) {
+  const angle = (2 * Math.PI / totalDots) * i;
+  const x = 150 + radius * Math.cos(angle) - 15;
+  const y = 150 + radius * Math.sin(angle) - 15;
+  const dot = document.createElement("div");
+  dot.className = "dot";
+  dot.style.left = `${x}px`;
+  dot.style.top = `${y}px`;
+  dot.onclick = () => openBloom();
+  ring.appendChild(dot);
+}
+
+function openBloom() {
+  centerMsg.style.display = "none";
+  flower.style.display = "block";
+}
+
+function closeBloom() {
+  flower.style.display = "none";
+  centerMsg.style.display = "flex";
+}
+
+  </script>
+</body>
+</html>
