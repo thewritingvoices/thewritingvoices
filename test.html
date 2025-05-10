@@ -1,67 +1,116 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-  <title>Clickable Petal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Garden</title>
   <style>
     body {
-      font-family: Georgia, serif;
       background-color: #1a1a1a;
       color: white;
+      font-family: Georgia, serif;
       text-align: center;
       padding: 2em;
-    }
+    }h1 {
+  margin-bottom: 2em;
+}
 
-    .petal {
-      display: inline-block;
-      background: #6c5ce7;
-      padding: 1em 2em;
-      border-radius: 50px;
-      cursor: pointer;
-      margin: 1em;
-    }
+.flower {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
 
-    .popup {
-      display: none;
-      background: #333;
-      padding: 2em;
-      margin-top: 2em;
-      border-radius: 10px;
-    }
+.petal {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #6c5ce7;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+  transform-origin: center;
+}
 
-    .close-btn {
-      margin-top: 1em;
-      padding: 0.5em 1em;
-      background: #444;
-      color: white;
-      border: none;
-      border-radius: 8px;
-    }
+/* Position petals in a circle */
+.petal1 { transform: rotate(0deg) translateY(-130px); left: 100px; top: 100px; }
+.petal2 { transform: rotate(72deg) translateY(-130px); left: 100px; top: 100px; }
+.petal3 { transform: rotate(144deg) translateY(-130px); left: 100px; top: 100px; }
+.petal4 { transform: rotate(216deg) translateY(-130px); left: 100px; top: 100px; }
+.petal5 { transform: rotate(288deg) translateY(-130px); left: 100px; top: 100px; }
+
+.popup {
+  display: none;
+  background: #333;
+  padding: 2em;
+  margin-top: 2em;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-btn {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.back-button {
+  display: block;
+  width: fit-content;
+  margin: 4em auto 0;
+  padding: 0.6em 1.4em;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #6c5ce7;
+}
+
   </style>
 </head>
-<body>
-
-  <h1>Spiral Garden</h1>
-
-  <!-- Petal -->
-  <div class="petal" onclick="showLesson()">Click Petal</div>
-
-  <!-- Pop-up Lesson -->
-  <div class="popup" id="lessonBox">
-    <p>This is where the lesson lives! You opened it by clicking the petal.</p>
-    <button class="close-btn" onclick="hideLesson()">Close</button>
-  </div>
-
-  <script>
-    function showLesson() {
-      document.getElementById("lessonBox").style.display = "block";
+<body>  <h1>Spiral Flower Garden</h1>  <div class="flower">
+    <div class="petal petal1" onclick="showPopup('popup1')">Petal 1</div>
+    <div class="petal petal2" onclick="showPopup('popup2')">Petal 2</div>
+    <div class="petal petal3" onclick="showPopup('popup3')">Petal 3</div>
+    <div class="petal petal4" onclick="showPopup('popup4')">Petal 4</div>
+    <div class="petal petal5" onclick="showPopup('popup5')">Petal 5</div>
+  </div>  <!-- Popups for each petal -->  <div id="popup1" class="popup">
+    <p>Lesson 1: This is a lesson about headings and structure.</p>
+    <button class="close-btn" onclick="hidePopup('popup1')">Close</button>
+  </div>  <div id="popup2" class="popup">
+    <p>Lesson 2: Let's talk about text color and fonts.</p>
+    <button class="close-btn" onclick="hidePopup('popup2')">Close</button>
+  </div>  <div id="popup3" class="popup">
+    <p>Lesson 3: Images make everything more vivid.</p>
+    <button class="close-btn" onclick="hidePopup('popup3')">Close</button>
+  </div>  <div id="popup4" class="popup">
+    <p>Lesson 4: Hover effects and interactivity.</p>
+    <button class="close-btn" onclick="hidePopup('popup4')">Close</button>
+  </div>  <div id="popup5" class="popup">
+    <p>Lesson 5: Buttons and user feedback.</p>
+    <button class="close-btn" onclick="hidePopup('popup5')">Close</button>
+  </div>  <script>
+    function showPopup(id) {
+      document.getElementById(id).style.display = "block";
     }
 
-    function hideLesson() {
-      document.getElementById("lessonBox").style.display = "none";
+    function hidePopup(id) {
+      document.getElementById(id).style.display = "none";
     }
-  </script>
-
-  <a href="architect.html" class="back-button">← Return to The Architect</a>
+  </script><a href="architect.html" class="back-button">← Return to The Architect</a>
 
 </body>
 </html>
