@@ -2,23 +2,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flower Garden</title>
+  <title>Bloom Field</title>
   <style>
     body {
       background-color: #1a1a1a;
       color: white;
       font-family: Georgia, serif;
-      text-align: center;
       padding: 2em;
+      text-align: center;
     }h1 {
   margin-bottom: 2em;
 }
 
+.dot-field {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 4em;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  background-color: #6c5ce7;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
 .flower {
+  display: none;
   position: relative;
   width: 300px;
   height: 300px;
-  margin: auto;
+  margin: 2em auto;
 }
 
 .petal {
@@ -40,25 +61,25 @@
 .petal4 { transform: rotate(216deg) translateY(-130px); left: 100px; top: 100px; }
 .petal5 { transform: rotate(288deg) translateY(-130px); left: 100px; top: 100px; }
 
-.stem-label {
-  width: 2px;
-  height: 100px;
-  background-color: #6c5ce7;
-  margin: 3em auto 1em;
-  position: relative;
-}
-
-.stem-label::after {
-  content: 'Bloom 1: The Basics';
+.center-label {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  font-size: 14px;
+  transform: translate(-50%, -50%);
+  background: #222;
   color: #aee0ff;
-  background-color: transparent;
-  padding: 0.2em 0.5em;
+  padding: 1em;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-style: italic;
+  box-shadow: 0 0 8px rgba(174, 224, 255, 0.3);
 }
 
 .popup {
@@ -101,34 +122,42 @@
 
   </style>
 </head>
-<body>  <h1>Spiral Flower Garden</h1>  <div class="flower">
+<body>
+  <h1>Bloom Field</h1>  <div class="dot-field">
+    <div class="dot" onclick="showFlower('flower1')"></div>
+    <div class="dot" onclick="showFlower('flower2')"></div>
+  </div>  <!-- Flower 1 -->  <div id="flower1" class="flower">
     <div class="petal petal1" onclick="showPopup('popup1')">Petal 1</div>
     <div class="petal petal2" onclick="showPopup('popup2')">Petal 2</div>
     <div class="petal petal3" onclick="showPopup('popup3')">Petal 3</div>
     <div class="petal petal4" onclick="showPopup('popup4')">Petal 4</div>
     <div class="petal petal5" onclick="showPopup('popup5')">Petal 5</div>
-  </div>  <div class="stem-label"></div>  <!-- Popups for each petal -->  <div id="popup1" class="popup">
-    <p>Lesson 1: This is a lesson about headings and structure.</p>
-    <button class="close-btn" onclick="hidePopup('popup1')">Close</button>
-  </div>  <div id="popup2" class="popup">
-    <p>Lesson 2: Let's talk about text color and fonts.</p>
-    <button class="close-btn" onclick="hidePopup('popup2')">Close</button>
-  </div>  <div id="popup3" class="popup">
-    <p>Lesson 3: Images make everything more vivid.</p>
-    <button class="close-btn" onclick="hidePopup('popup3')">Close</button>
-  </div>  <div id="popup4" class="popup">
-    <p>Lesson 4: Hover effects and interactivity.</p>
-    <button class="close-btn" onclick="hidePopup('popup4')">Close</button>
-  </div>  <div id="popup5" class="popup">
-    <p>Lesson 5: Buttons and user feedback.</p>
-    <button class="close-btn" onclick="hidePopup('popup5')">Close</button>
-  </div>  <script>
-    function showPopup(id) {
-      document.getElementById(id).style.display = "block";
+    <div class="center-label">Bloom 1<br>The Basics</div>
+  </div>  <!-- Flower 2 -->  <div id="flower2" class="flower">
+    <div class="petal petal1" onclick="showPopup('popup6')">Petal A</div>
+    <div class="petal petal2" onclick="showPopup('popup7')">Petal B</div>
+    <div class="petal petal3" onclick="showPopup('popup8')">Petal C</div>
+    <div class="petal petal4" onclick="showPopup('popup9')">Petal D</div>
+    <div class="petal petal5" onclick="showPopup('popup10')">Petal E</div>
+    <div class="center-label">Bloom 2<br>Coming Soon</div>
+  </div>  <!-- Popups for Flower 1 -->  <div id="popup1" class="popup"><p>Lesson 1: Headings</p><button class="close-btn" onclick="hidePopup('popup1')">Close</button></div>
+  <div id="popup2" class="popup"><p>Lesson 2: Colors</p><button class="close-btn" onclick="hidePopup('popup2')">Close</button></div>
+  <div id="popup3" class="popup"><p>Lesson 3: Images</p><button class="close-btn" onclick="hidePopup('popup3')">Close</button></div>
+  <div id="popup4" class="popup"><p>Lesson 4: Hover Effects</p><button class="close-btn" onclick="hidePopup('popup4')">Close</button></div>
+  <div id="popup5" class="popup"><p>Lesson 5: Buttons</p><button class="close-btn" onclick="hidePopup('popup5')">Close</button></div>  <!-- Popups for Flower 2 -->  <div id="popup6" class="popup"><p>Future lesson A</p><button class="close-btn" onclick="hidePopup('popup6')">Close</button></div>
+  <div id="popup7" class="popup"><p>Future lesson B</p><button class="close-btn" onclick="hidePopup('popup7')">Close</button></div>
+  <div id="popup8" class="popup"><p>Future lesson C</p><button class="close-btn" onclick="hidePopup('popup8')">Close</button></div>
+  <div id="popup9" class="popup"><p>Future lesson D</p><button class="close-btn" onclick="hidePopup('popup9')">Close</button></div>
+  <div id="popup10" class="popup"><p>Future lesson E</p><button class="close-btn" onclick="hidePopup('popup10')">Close</button></div>  <script>
+    function showFlower(id) {
+      document.querySelectorAll('.flower').forEach(f => f.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
     }
-
+    function showPopup(id) {
+      document.getElementById(id).style.display = 'block';
+    }
     function hidePopup(id) {
-      document.getElementById(id).style.display = "none";
+      document.getElementById(id).style.display = 'none';
     }
   </script><a href="architect.html" class="back-button">← Return to The Architect</a>
 
