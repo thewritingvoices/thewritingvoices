@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickable Petal</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .petal {
+      display: inline-block;
+      background: #6c5ce7;
+      padding: 1em 2em;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 1em;
+    }
+
+    .popup {
+      display: none;
+      background: #333;
+      padding: 2em;
+      margin-top: 2em;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Spiral Garden</h1>
+
+  <!-- Petal -->
+  <div class="petal" onclick="showLesson()">Click Petal</div>
+
+  <!-- Pop-up Lesson -->
+  <div class="popup" id="lessonBox">
+    <p>This is where the lesson lives! You opened it by clicking the petal.</p>
+    <button class="close-btn" onclick="hideLesson()">Close</button>
+  </div>
+
+  <script>
+    function showLesson() {
+      document.getElementById("lessonBox").style.display = "block";
+    }
+
+    function hideLesson() {
+      document.getElementById("lessonBox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
