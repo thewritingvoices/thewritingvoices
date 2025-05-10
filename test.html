@@ -41,6 +41,18 @@
 .petal4 { transform: rotate(216deg) translateY(-130px); left: 100px; top: 100px; }
 .petal5 { transform: rotate(288deg) translateY(-130px); left: 100px; top: 100px; }
 
+.stem-label {
+  width: 120px;
+  margin: 3em auto 0;
+  padding: 0.5em;
+  background-color: #444;
+  color: #aee0ff;
+  border-radius: 10px;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-style: italic;
+}
+
 .popup {
   display: none;
   background: #333;
@@ -87,7 +99,7 @@
     <div class="petal petal3" onclick="showPopup('popup3')">Petal 3</div>
     <div class="petal petal4" onclick="showPopup('popup4')">Petal 4</div>
     <div class="petal petal5" onclick="showPopup('popup5')">Petal 5</div>
-  </div>  <!-- Popups for each petal -->  <div id="popup1" class="popup">
+  </div>  <div class="stem-label">Bloom 1: The Basics</div>  <!-- Popups for each petal -->  <div id="popup1" class="popup">
     <p>Lesson 1: This is a lesson about headings and structure.</p>
     <button class="close-btn" onclick="hidePopup('popup1')">Close</button>
   </div>  <div id="popup2" class="popup">
