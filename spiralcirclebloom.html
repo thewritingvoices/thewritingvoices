@@ -94,59 +94,73 @@
 </head>
 <body>
   <h1>Spiral Circle Bloom</h1>
-  <div class="ring" id="ring"></div>
-  <div class="flower" id="flower">
-    <div class="petal petal1" onclick="togglePopup('popup1')">Spiral</div>
-    <div class="petal petal2" onclick="togglePopup('popup2')">Loop</div>
-    <div class="petal petal3" onclick="togglePopup('popup3')">Echo</div>
-    <div class="petal petal4" onclick="togglePopup('popup4')">Breath</div>
-    <div class="petal petal5" onclick="togglePopup('popup5')">Return</div>
-    <div class="center-label" onclick="closeBloom()">Close</div>
-  </div>
-  <div id="popup1" class="popup">The spiral is not a straight path. We return again and again.</div>
-  <div id="popup2" class="popup">The loop is a kindness. It’s motion, not failure.</div>
-  <div id="popup3" class="popup">Echo: every insight leaves a resonance. Let the silence do its work.</div>
-  <div id="popup4" class="popup">Breath marks the spiral's rhythm. Inhale questions, exhale clarity.</div>
-  <div id="popup5" class="popup">Return is sacred. You return changed and ready.</div>
-  <script>
+  <div class="ring" id="ring"></div>  <!-- Eight unique flowers -->  <div id="flowers">
+    <!-- Placeholder: first 2 blooms shown for now -->
+    <div id="flower1" class="flower">
+      <div class="petal petal1" onclick="togglePopup('popup1')">Spiral</div>
+      <div class="petal petal2" onclick="togglePopup('popup2')">Loop</div>
+      <div class="petal petal3" onclick="togglePopup('popup3')">Echo</div>
+      <div class="petal petal4" onclick="togglePopup('popup4')">Breath</div>
+      <div class="petal petal5" onclick="togglePopup('popup5')">Return</div>
+      <div class="center-label" onclick="closeBloom()">Close</div>
+    </div>
+    <div id="flower2" class="flower">
+      <div class="petal petal1" onclick="togglePopup('popup6')">HTML</div>
+      <div class="petal petal2" onclick="togglePopup('popup7')">CSS</div>
+      <div class="petal petal3" onclick="togglePopup('popup8')">JS</div>
+      <div class="petal petal4" onclick="togglePopup('popup9')">DOM</div>
+      <div class="petal petal5" onclick="togglePopup('popup10')">Debug</div>
+      <div class="center-label" onclick="closeBloom()">Close</div>
+    </div>
+  </div>  <!-- Popups for flower1 -->  <div id="popup1" class="popup">The spiral is not a straight path.</div>
+  <div id="popup2" class="popup">The loop is a kindness.</div>
+  <div id="popup3" class="popup">Echo: resonance remains.</div>
+  <div id="popup4" class="popup">Breath: rhythm of thought.</div>
+  <div id="popup5" class="popup">Return brings readiness.</div>  <!-- Popups for flower2 -->  <div id="popup6" class="popup">HTML gives the structure.</div>
+  <div id="popup7" class="popup">CSS styles the surface.</div>
+  <div id="popup8" class="popup">JavaScript adds life.</div>
+  <div id="popup9" class="popup">DOM connects logic to view.</div>
+  <div id="popup10" class="popup">Debugging sharpens insight.</div>  <script>
     const ring = document.getElementById('ring');
-    const flower = document.getElementById('flower');
+    const flowers = document.querySelectorAll('.flower');
     const popups = document.querySelectorAll('.popup');
     const totalDots = 8;
-    const radius = 130;for (let i = 0; i < totalDots; i++) {
-  const angle = (2 * Math.PI / totalDots) * i;
-  const x = 150 + radius * Math.cos(angle) - 15;
-  const y = 150 + radius * Math.sin(angle) - 15;
-  const dot = document.createElement('div');
-  dot.className = 'dot';
-  dot.style.left = `${x}px`;
-  dot.style.top = `${y}px`;
-  dot.onclick = () => openBloom();
-  ring.appendChild(dot);
-}
+    const radius = 130;
 
-function openBloom() {
-  flower.style.display = 'block';
-  document.querySelectorAll('.dot').forEach(d => d.classList.add('hidden'));
-}
+    for (let i = 0; i < totalDots; i++) {
+      const angle = (2 * Math.PI / totalDots) * i;
+      const x = 150 + radius * Math.cos(angle) - 15;
+      const y = 150 + radius * Math.sin(angle) - 15;
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+      dot.onclick = () => openBloom(i + 1);
+      ring.appendChild(dot);
+    }
 
-function closeBloom() {
-  flower.style.display = 'none';
-  document.querySelectorAll('.dot').forEach(d => d.classList.remove('hidden'));
-  popups.forEach(p => p.style.display = 'none');
-}
+    function openBloom(index) {
+      document.querySelectorAll('.dot').forEach(d => d.classList.add('hidden'));
+      flowers.forEach(f => f.style.display = 'none');
+      const target = document.getElementById(`flower${index}`);
+      if (target) target.style.display = 'block';
+    }
 
-function togglePopup(id) {
-  const el = document.getElementById(id);
-  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
-}
+    function closeBloom() {
+      flowers.forEach(f => f.style.display = 'none');
+      document.querySelectorAll('.dot').forEach(d => d.classList.remove('hidden'));
+      popups.forEach(p => p.style.display = 'none');
+    }
 
-window.addEventListener('click', (e) => {
-  if (!e.target.closest('.flower') && !e.target.classList.contains('dot')) {
-    closeBloom();
-  }
-});
+    function togglePopup(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
 
-  </script>
-</body>
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('.flower') && !e.target.classList.contains('dot')) {
+        closeBloom();
+      }
+    });
+  </script></body>
 </html>
