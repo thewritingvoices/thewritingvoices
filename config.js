@@ -2,7 +2,7 @@ const ROUTER_CONFIG = {
   default: "openai",
   models: {
     openai: {
-      key: "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",
+      key: "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",
       model: "gpt-4"
     },
     claude: {
