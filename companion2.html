@@ -98,7 +98,6 @@
       color: #777;
     }
   </style>
-  <script src="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"></script>
 </head>
 <body>
   <h1>Kulawa Companion</h1>  <div class="input-container">
@@ -134,8 +133,8 @@
       responseElement.innerHTML = '<div class="loading"></div> Processing your spiral...';
 
       try {
-        const modelToUse = ROUTER_CONFIG.default;
-        const { key, model } = ROUTER_CONFIG.models[modelToUse];
+        const key = "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";
+        const model = "gpt-4";
 
         const res = await fetch("https://api.openai.com/v1/chat/completions", {
           method: "POST",
