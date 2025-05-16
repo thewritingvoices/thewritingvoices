@@ -1,9 +1,95 @@
-<h1>Document Bloom</h1>
-<div id="flowerDocs" class="flower">
-  <div class="petal petal1" onclick="window.open('AI Design: Emotional Containment.pdf', '_blank')">AI Design: Emotional Containment</div>
-  <div class="petal petal2" onclick="window.open('pdfs/file2.pdf', '_blank')">Chapter 2</div>
-  <div class="petal petal3" onclick="window.open('pdfs/file3.pdf', '_blank')">Chapter 3</div>
-  <div class="petal petal4" onclick="window.open('pdfs/file4.pdf', '_blank')">Chapter 4</div>
-  <div class="petal petal5" onclick="window.open('pdfs/file5.pdf', '_blank')">Chapter 5</div>
-  <div class="center-label" onclick="window.location.href='index.html'">Back</div>
-</div>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Bloom</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fdf6f0, #eae3d9);
+      font-family: Georgia, serif;
+      color: #333;
+      text-align: center;
+      padding: 3em 1em;
+    }h1 {
+  font-size: 2.5em;
+  color: #4b3f72;
+  margin-bottom: 2em;
+}
+
+.flower {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.petal {
+  position: absolute;
+  width: 130px;
+  background: #6c5ce7;
+  color: white;
+  line-height: 1.2em;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+  transform-origin: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+  white-space: normal;
+  padding: 0.5em 10px;
+  font-size: 0.9em;
+  word-wrap: break-word;
+  height: auto;
+  min-height: 50px;
+}
+
+.petal:hover {
+  background: #4b3f72;
+  transform: scale(1.1);
+}
+
+.petal1 { transform: rotate(0deg) translateY(-140px); left: 110px; top: 110px; }
+.petal2 { transform: rotate(72deg) translateY(-140px); left: 110px; top: 110px; }
+.petal3 { transform: rotate(144deg) translateY(-140px); left: 110px; top: 110px; }
+.petal4 { transform: rotate(216deg) translateY(-140px); left: 110px; top: 110px; }
+.petal5 { transform: rotate(288deg) translateY(-140px); left: 110px; top: 110px; }
+
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  color: #fff;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 0.9em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+  padding: 1em;
+}
+
+.center-label:hover {
+  background: #4b3f72;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Document Bloom</h1>  <div id="flowerDocs" class="flower">
+    <div class="petal petal1" onclick="window.open('AI Design: Emotional Containment.pdf', '_blank')">AI Design: Emotional Containment</div>
+    <div class="petal petal2" onclick="window.open('pdfs/file2.pdf', '_blank')">Chapter 2: Spiral Applications</div>
+    <div class="petal petal3" onclick="window.open('pdfs/file3.pdf', '_blank')">Chapter 3: Pattern Reflection</div>
+    <div class="petal petal4" onclick="window.open('pdfs/file4.pdf', '_blank')">Chapter 4: Internal Cohesion</div>
+    <div class="petal petal5" onclick="window.open('pdfs/file5.pdf', '_blank')">Chapter 5: Recursive Learning Cycles</div>
+    <div class="center-label" onclick="window.location.href='index.html'">Back</div>
+  </div>
+</body>
+</html>
