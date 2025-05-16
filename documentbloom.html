@@ -49,10 +49,11 @@
 }
 
 .petal1 { transform: rotate(0deg) translateY(-140px); left: 110px; top: 110px; }
-.petal2 { transform: rotate(72deg) translateY(-140px); left: 110px; top: 110px; }
-.petal3 { transform: rotate(144deg) translateY(-140px); left: 110px; top: 110px; }
-.petal4 { transform: rotate(216deg) translateY(-140px); left: 110px; top: 110px; }
-.petal5 { transform: rotate(288deg) translateY(-140px); left: 110px; top: 110px; }
+.petal2 { transform: rotate(60deg) translateY(-140px); left: 110px; top: 110px; }
+.petal3 { transform: rotate(120deg) translateY(-140px); left: 110px; top: 110px; }
+.petal4 { transform: rotate(180deg) translateY(-140px); left: 110px; top: 110px; }
+.petal5 { transform: rotate(240deg) translateY(-140px); left: 110px; top: 110px; }
+.petal6 { transform: rotate(300deg) translateY(-140px); left: 110px; top: 110px; }
 
 .center-label {
   position: absolute;
@@ -80,16 +81,34 @@
   background: #4b3f72;
 }
 
+.back-button {
+  display: block;
+  margin: 3em auto 0;
+  padding: 0.8em 1.6em;
+  background-color: #4b3f72;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #3a2f58;
+}
+
   </style>
 </head>
 <body>
   <h1>Document Bloom</h1>  <div id="flowerDocs" class="flower">
-    <div class="petal petal1" onclick="window.open('AI Design: Emotional Containment.pdf', '_blank')">AI Design: Emotional Containment</div>
+    <div class="petal petal1" onclick="window.open('pdfs/file1.pdf', '_blank')">AI Design: Emotional Containment</div>
     <div class="petal petal2" onclick="window.open('pdfs/file2.pdf', '_blank')">Chapter 2: Spiral Applications</div>
     <div class="petal petal3" onclick="window.open('pdfs/file3.pdf', '_blank')">Chapter 3: Pattern Reflection</div>
     <div class="petal petal4" onclick="window.open('pdfs/file4.pdf', '_blank')">Chapter 4: Internal Cohesion</div>
     <div class="petal petal5" onclick="window.open('pdfs/file5.pdf', '_blank')">Chapter 5: Recursive Learning Cycles</div>
-    <div class="center-label" onclick="window.location.href='index.html'">Back</div>
-  </div>
+    <div class="petal petal6" onclick="window.open('pdfs/file6.pdf', '_blank')">Appendix: Archetypal Index</div>
+    <div class="center-label" onclick="window.open('pdfs/core-doc.pdf', '_blank')">Core Spiral</div>
+  </div><a href="https://www.thewritingvoices.me/archivist.html" class="back-button">← Return to The Archivist</a>
+
 </body>
 </html>
