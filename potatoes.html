@@ -61,7 +61,49 @@
   <p><strong>Planted:</strong> Spring 2025<br />
      <strong>Container:</strong> Grow bags (standard, not bottomless yet)<br />
      <strong>Status:</strong> Actively growing – vines are lush with room to expand</p>
+<!-- Potato Cycle Toggle Section -->
+<style>
+  .cycle-content {
+    display: none;
+    margin-top: 1em;
+  }
 
+  .collapsible {
+    cursor: pointer;
+    color: #aadfff;
+  }
+
+  .collapsible:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<h2 class="collapsible">▸ View Our Year-Round Potato Cycle</h2>
+<div class="cycle-content">
+  <p><strong>Spring Cycle:</strong> Plant late Jan–April. Harvest May–July. Use east-facing light, 3–4 seed potatoes per 20-gallon bag. Mulch and hill regularly.</p>
+  <p><strong>Summer Break:</strong> Too hot to plant. Let soil rest. Grow sweet potatoes or okra. Prep fall seed potatoes indoors in August.</p>
+  <p><strong>Fall Cycle:</strong> Plant late Aug–Oct. Harvest Dec–Feb. Shade bags in early weeks, cover for frost. Smaller yields, but good rotation.</p>
+  <p><strong>Cycle Quick Chart:</strong></p>
+  <ul>
+    <li><strong>Jan–Apr:</strong> Plant spring waves</li>
+    <li><strong>May–Jul:</strong> Harvest, dry, compost</li>
+    <li><strong>Aug–Sep:</strong> Rest soil, prep new slips</li>
+    <li><strong>Sep–Oct:</strong> Fall planting</li>
+    <li><strong>Dec–Feb:</strong> Fall harvest</li>
+  </ul>
+  <p><em>We use 20-gallon grow bags for mobility and yield balance. No cold storage—just cycle, compost, repeat.</em></p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const collapsible = document.querySelector(".collapsible");
+    const content = document.querySelector(".cycle-content");
+
+    collapsible.addEventListener("click", function () {
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
   <img src="../PXL_20250517_232746689.MP.jpg" alt="Current photo of potato grow bags with room to expand" class="full-width" />
 
   <h2>Why We Grow It</h2>
