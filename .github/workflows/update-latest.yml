@@ -1,1 +1,31 @@
+name: Update latest.md
 
+on:
+  workflow_dispatch:
+    inputs:
+      content:
+        description: 'New text for latest.md'
+        required: true
+        type: string
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Update latest.md
+        run: |
+          echo "${{ github.event.inputs.content }}" > latest.md
+          git config user.name "thewritingvoices"
+          git config user.email "you@example.com"
+          git add latest.md
+          git commit -m "Update latest.md via Action"
+          git push
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
