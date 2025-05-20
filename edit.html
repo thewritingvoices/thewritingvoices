@@ -5,29 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Submit Thoughts</title>
   <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-      background-color: #f4f4f4;
-    }
-    textarea {
-      width: 100%;
-      height: 300px;
-      padding: 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    button {
-      margin-top: 1rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      background-color: #222;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+    body { font-family: sans-serif; padding: 2rem; background: #f4f4f4; }
+    textarea { width: 100%; height: 300px; padding: 1rem; font-size: 1rem; border-radius: 8px; }
+    button { margin-top: 1rem; padding: 1rem 2rem; font-size: 1rem; background: #222; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -43,41 +23,26 @@
       e.preventDefault();
 
       const content = document.getElementById('entry').value;
-      const base64Content = btoa(unescape(encodeURIComponent(content)));
 
-      const repo = "thewritingvoices.github.io";
-      const path = "latest.md";
-      const username = "thewritingvoices";
-      const token = "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";
-
-      const getFile = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${path}`, {
+      const res = await fetch("https://api.github.com/repos/thewritingvoices/thewritingvoices/actions/workflows/update-latest.yml/dispatches", {
+        method: "POST",
         headers: {
-          Authorization: `token ${token}`,
-          Accept: "application/vnd.github.v3+json"
-        }
-      });
-
-      const fileData = await getFile.json();
-      const sha = fileData.sha;
-
-      const res = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${path}`, {
-        method: "PUT",
-        headers: {
-          Authorization: `token ${token}`,
-          Accept: "application/vnd.github.v3+json"
+          "Authorization": "token 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",
+          "Accept": "application/vnd.github+json"
         },
         body: JSON.stringify({
-          message: "Update from web form",
-          content: base64Content,
-          sha: sha
+          ref: "main",
+          inputs: {
+            content: content
+          }
         })
       });
 
       if (res.ok) {
-        alert("Update successful!");
+        alert("Submitted! Give GitHub a few seconds to update.");
         document.getElementById('entry').value = "";
       } else {
-        alert("Error updating file.");
+        alert("Error submitting.");
       }
     });
   </script>
