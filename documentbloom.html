@@ -19,11 +19,30 @@
       text-align: center;
       white-space: pre-line;
     }
-    iframe {
+    .document-button {
+      display: block;
       width: 100%;
-      height: 600px;
+      max-width: 600px;
+      margin: 1.5em auto;
+      padding: 1.2em;
+      font-size: 1.2em;
+      background-color: #4b3f72;
+      color: white;
       border: none;
-      margin-bottom: 2em;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .document-button:hover {
+      background-color: #3a2f58;
+    }
+    .viewer-frame {
+      display: none;
+      width: 100%;
+      height: 80vh;
+      border: 2px solid #ccc;
+      margin: 2em 0;
     }
     .return-button {
       display: block;
@@ -58,13 +77,24 @@ How to approach them:
 Begin where it hums. Move in loops, not lines. Pause when needed. Return when called.</p>
   </div>
 
-  <iframe src="docs/a.pdf" title="Held in One Hand"></iframe>
-  <iframe src="docs/b.pdf" title="Signal Prompt"></iframe>
-  <iframe src="docs/c.pdf" title="From Command to Communion"></iframe>
-  <iframe src="docs/d.pdf" title="Emotional Containment"></iframe>
-  <iframe src="docs/e.pdf" title="Relational Invitation"></iframe>
-  <iframe src="docs/f.pdf" title="Returning the Flame"></iframe>
+  <a class="document-button" onclick="showPDF('docs/a.pdf')">Held in One Hand — mobile architecture and memory</a>
+  <a class="document-button" onclick="showPDF('docs/b.pdf')">Signal Prompt — ritual as interaction design</a>
+  <a class="document-button" onclick="showPDF('docs/c.pdf')">From Command to Communion — reframing agency in AI systems</a>
+  <a class="document-button" onclick="showPDF('docs/d.pdf')">Emotional Containment — holding without harm</a>
+  <a class="document-button" onclick="showPDF('docs/e.pdf')">Relational Invitation — companion models beyond utility</a>
+  <a class="document-button" onclick="showPDF('docs/f.pdf')">Returning the Flame — reviving the original dream of AI</a>
+
+  <iframe id="pdfViewer" class="viewer-frame"></iframe>
 
   <a class="return-button" href="../../index.html">Return to Site</a>
+
+  <script>
+    function showPDF(path) {
+      const viewer = document.getElementById("pdfViewer");
+      viewer.src = path;
+      viewer.style.display = "block";
+      viewer.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>
