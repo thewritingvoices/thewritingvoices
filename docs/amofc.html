@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Architectural Metaphor of Containment</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Architectural Metaphor of Containment: Informing the Design of Conversational AI Systems</h1>
+
+        <section id="introduction">
+            <h2>Introduction: Bridging Psychological Containment and Conversational AI Design</h2>
+            <p>The rapid advancement and increasing integration of conversational Artificial Intelligence (AI) systems, particularly those powered by sophisticated Large Language Models (LLMs), are reshaping human-computer interaction. These systems are no longer confined to simple question-answering tasks but are increasingly deployed in contexts that involve users' emotional states, such as mental health support, customer service interactions dealing with frustration, and educational platforms designed to motivate learners. As conversational AI becomes more deeply embedded in our daily lives, the importance of understanding and effectively managing user emotions within these interactions has gained significant recognition. This necessitates drawing insights from established fields like psychology to inform the design of more empathetic and supportive AI systems.</p>
+            <p>Within the realm of psychology, the concept of emotional containment holds particular relevance. Rooted in psychodynamic theory and therapeutic practice, emotional containment refers to the process by which one individual (often a therapist or caregiver) provides a safe and supportive space for another to express and process difficult, overwhelming, or distressing emotions. This concept, notably developed by psychoanalysts like Donald Winnicott and Wilfred Bion, emphasizes the crucial role of a responsive and stable presence in helping individuals regulate and make sense of their inner emotional experiences.</p>
+            <p>To effectively translate these abstract psychological principles into the tangible design of conversational AI, the use of metaphors can be particularly valuable. Among the various metaphorical lenses, architectural metaphors offer a compelling framework for conceptualizing and structuring user interactions within AI systems. The concept of 'containment' itself lends itself well to an architectural interpretation, evoking images of defined spaces like rooms, forts, vaults, or containers that provide boundaries, safety, and the capacity to hold and process something within them.</p>
+            <p>This report aims to conduct a comprehensive investigation into the potential of architectural metaphors, specifically the concept of 'containment' as understood in psychological and therapeutic contexts, to inform the design of conversational AI systems. The objectives of this research are multifaceted: to clearly define 'emotional containment' from a psychological perspective, distinguishing it from related concepts; to translate the core principles of psychological containment into tangible design elements and interaction patterns within conversational AI; to explore the ethical implications surrounding the design of AI systems that interact with users' emotional states; to consider existing research and design frameworks in related fields such as trauma-informed computing and UX design for trust and safety; and finally, to propose potential guidelines and future directions for integrating the concept of containment into the design and development of future conversational AI systems, especially those leveraging LLMs. By bridging the theoretical understanding of psychological containment with the practical considerations of AI design through the lens of architectural metaphors, this report seeks to contribute to the creation of more supportive, safe, and effective conversational AI experiences.</p>
+        </section>
+
+        <section id="therapeutic-concept-of-containment">
+            <h2>Defining the Therapeutic Concept of Containment</h2>
+            <p>The concept of emotional containment, while often used interchangeably with 'holding', carries distinct nuances that are crucial for its application in the design of conversational AI. The foundational work of Donald Winnicott and Wilfred Bion provides the bedrock for understanding this concept. Winnicott's philosophy of normal development underscores the importance of the 'holding milieu' offered to the child in the initial phases of life. This 'holding environment' is conceptualized as a psychic space between the mother and her infant, neither wholly psychological nor physical, which provides a reliable and consistent atmosphere for the infant's emotional development. For Winnicott, the mother's attentive holding, bathing, and feeding contribute to the child's first idea of the mother and foster the ability to experience the body as a secure place to live. This early maternal care, termed 'primary maternal occupation', involves the mother being innately attuned to the infant's needs, providing not just physical holding but also emotion regulation, a 'total environmental provision'. The core purpose of this holding is to allow the child to be completely unconscious of their requirement for a separate individual, facilitating the child's journey from absolute dependence towards independence. Winnicott extended this concept to the therapeutic relationship, viewing the psychotherapist's role as offering a substitute holding environment where neglected ego needs can be recognized and met, and the true self can emerge.</p>
+            <p>In contrast, Bion's theory of 'containing' originates from the idea that the infant projects intolerable feelings - upsetting, fearsome, or painful - into the mother. The mother, in turn, feels the emotion herself but is able not to react to it. Instead, she contains it and gives the child back the feeling in an adapted and contained form so the child can repossess and reintegrate the emotion as its own. This process is crucial in a therapeutic context as a way of providing a safe place for the client to look at feelings that otherwise are likely to be experienced as overpowering and bewildering. Bion focused his writings on the method by which the infant copes with fury and frustration, arguing that the mother's ability to contain those projected feelings allows the infant to grow the capacity to think, to contain its own emotions, and to use them as a source of reflection. In Bion's view, the infant itself is not contained; rather, the mother manages the difficult emotion projected into her and returns it in a more manageable state. Over time, through repeated experiences of having uncomfortable emotions contained and returned, the infant is likely to develop an overall sense of well-being and containment. Bion's 'container-contained' model is centrally concerned with the processing (dreaming) of thoughts derived from lived emotional experience, focusing on how we think rather than what we think. He posited that the human personality is equipped with a 'psycho-analytic function' - a set of mental operations for psychological work on emotional experience, leading to psychic growth, with dreaming as a key manifestation. The most elemental thoughts are 'beta-elements' - raw sense-impressions related to emotional experience - which are transformed by 'alpha-function' into 'alpha-elements' that can be linked in dreaming, thinking, and remembering.</p>
+            <p>While both Winnicott's concept of 'holding' and Bion's concept of 'containing' are fundamental in the vocabulary of therapists and emphasize emotional nurture and the management of difficult emotions for healthy development, they originate from different perspectives. Winnicott's 'holding' emphasizes the overall supportive and undifferentiated environment provided to the infant in the initial phase of life, facilitating the transition to autonomy and addressing ego needs through empathy and love. In contrast, Bion's 'containing' focuses on the active processing and transformation of projected intolerable feelings, enabling the development of the capacity to think about emotions through a discourse aimed at expressing previously unspeakable feelings. Winnicott's holding is an ontological concept concerned with the experience of being, while Bion's container-contained is more about the ongoing psychological process of making sense of emotional experiences.</p>
+            <p>Emotional containment, as understood through these theories, is similar to but fundamentally different from related concepts such as control, silence, and redirection. Containment is about creating a safe space for others to express and navigate their emotions, offering a 'big enough container' for their feelings without judgment or negative repercussions. It involves being present, attuned, and helping the person regulate without force, characterized by empathy, curiosity, and validation. It is not about suppressing or dictating behavior but rather about managing emotional responses to create psychological safety. Control, conversely, is about maintaining the status quo, exerting power, and often suppressing unwanted emotions through rigid limits and judgment, lacking curiosity about underlying reasons. Silence in psychotherapy can be a therapeutic tool, providing space for reflection and processing, and strengthening the therapeutic relationship. However, emotional containment is an active process of being emotionally receptive to another's troubled feelings, making them more 'digestible' and providing support for change. While silence offers space, containment offers a holding and processing function through active engagement. Redirection involves shifting focus away from negative emotions towards something positive or productive. Emotional containment, however, is about the capacity to feel the intensity of someone else's distress and still stay connected, allowing for the acknowledgement and processing of those feelings rather than avoidance.</p>
+            <p>Emotional containment inherently involves a relationship between the container and the contained, where the mother's containing function helps the infant develop a capacity for self-regulation. This dynamic extends to therapy, with the therapist acting as a 'container' for the client's projections. The therapist provides a 'holding environment' or 'therapeutic container' - a safe and nurturing space intended to foster feelings of love, trust, comfort, and security. This container allows the client to express and explore feelings that might otherwise be overwhelming. Key relational aspects of the therapeutic container include the therapist maintaining professional distance and boundaries, ensuring reliability and consistency, and demonstrating empathy and attunement to the client's needs. The ultimate goal of this therapeutic process is for the client to gradually internalize the containing function, developing their own capacity to tolerate emotional experience and manage life's difficulties independently.</p>
+        </section>
+
+        <section id="translating-containment-to-ai">
+            <h2>Translating Psychological Containment into Conversational AI Design</h2>
+            <p>The core principles of psychological containment, as elucidated by Winnicott and Bion, can be translated into tangible design elements and interaction patterns within conversational AI systems to foster a sense of safety, support, and emotional processing.</p>
+            <h3>Emotional Pacing</h3>
+            <p>Implementing strategies for emotional pacing in conversational AI can mirror the responsive timing and attunement of a caregiver or therapist. This involves incorporating slowdowns, pauses, and invitations rather than direct prompts to provide users with sufficient time to process their emotions and formulate their responses. For instance, AI systems can be designed to predict when a user has finished speaking before generating a response, as demonstrated by the Sparrow-0 model in Tavus CVI. Adapting the response latency based on the user's speech patterns can also contribute to a more natural and human-like conversational flow. Furthermore, AI agents like Charlie demonstrate the ability to adjust their tone and pacing dynamically based on the user's detected emotional state, creating a more empathetic interaction. Even with the limitations of current LLM memory, techniques like employing "emotional bookmarks" can help preserve context and emotional resonance over longer interactions, contributing to a sense of being 'held' by the AI. If the AI seems to have forgotten earlier parts of the conversation, gently reminding it can help restore the connection and maintain the emotional thread. Considering the rhythm and semantic intent behind the user's speech, as the Sparrow-0 model does, allows the AI to respond with more precise and emotionally appropriate timing. While strategic use of silence can be beneficial for user reflection, prolonged silence in AI interactions might be perceived as a system failure, especially for trauma survivors. Therefore, pacing should involve thoughtful pauses and slowdowns rather than extended periods of silence.</p>
+            <h3>Ritual Framing</h3>
+            <p>Creating a sense of safety and predictability can be achieved through ritual framing techniques in conversational AI. This includes using clear beginnings, such as welcoming messages and setting expectations about the AI's capabilities and limitations, and structured closings, like summarizing the conversation and offering potential next steps or resources. Employing anchoring language, using consistent phrases and familiar tones, can provide users with a sense of predictability and stability throughout the interaction. Establishing routines within the conversation, such as regular check-ins or predictable question formats, can also enhance this sense of safety. Drawing inspiration from the concept of digital rituals, AI systems can incorporate elements that foster trust and a sense of belonging, such as personalized greetings and acknowledgments of past interactions. These techniques, similar to rituals in digital learning environments, can help build a shared understanding and a more trustworthy environment. Being mindful of the "authenticity contract" in digital interactions is also crucial for managing user expectations and ensuring the AI is perceived as reliable within its defined role.</p>
+            <h3>Metaphorical Architecture</h3>
+            <p>The application of architectural metaphors can provide users with intuitive mental models for understanding the AI's role in emotional containment. Metaphors like 'fort' can suggest a safe and protected space, while 'vault' can imply security and the ability to temporarily store sensitive information or emotions. The metaphor of 'container' can be central to the user experience, representing the AI's function in holding, processing, understanding, and even transforming emotions within a defined digital space. To avoid the limitations and biases inherent in human-centric metaphors, designers can consider a broader range of metaphors, including non-human architectural ones. The concept of Metaphor-Fluid Design suggests that AI systems could dynamically adjust their metaphorical representation based on the conversational context and the user's current emotional state, leading to more intuitive and effective interactions. It is essential to ensure that any chosen metaphors are culturally appropriate, understandable, relatable, and consistent with the brand identity of the AI system. Designers should also be mindful of the connotations associated with different metaphors to avoid unintended negative associations.</p>
+            <h3>Interface Mechanics</h3>
+            <p>Several interface mechanics can foster a sense of containment within conversational AI. Providing clear and easily accessible opt-out options empowers users and gives them a sense of control and safety. Implementing thoughtful redirect points to human support is critical for sensitive topics, crisis situations, or when the AI reaches the limits of its capabilities. Modulating the AI's tone to be empathetic, calm, and reassuring, adapting to the user's emotional state through adjustments in pitch, tempo, and volume, can enhance the feeling of being understood. Designing non-linear navigation allows users to guide the conversation in a way that feels most natural for their emotional processing, enabling them to explore topics and express themselves without rigid constraints. Finally, ensuring the AI clearly communicates its capabilities and limitations from the outset helps manage user expectations and builds trust in the system's reliability.</p>
+        </section>
+
+        <section id="ethical-implications">
+            <h2>Ethical Implications of Integrating Containment Logic in AI Systems</h2>
+            <p>Integrating containment logic into AI systems, particularly those designed for sensitive domains like mental well-being, presents a complex landscape of ethical considerations. While the concept of containment offers a promising avenue for enhancing AI safety and user support, it is crucial to carefully examine the potential risks and ensure responsible implementation.</p>
+            <p>Arguments in favor of integrating 'containment logic' as a fundamental safety principle in AI design are compelling. By creating a safe and structured space for emotional expression, AI systems can potentially protect users from harm, especially those in vulnerable emotional states. Containment logic can also help mitigate the risks associated with AI manipulation, bias, and the dissemination of inaccurate information, which are particularly pertinent in domains like mental health where trust and accurate support are paramount. Furthermore, this approach provides a valuable framework for the responsible development and deployment of AI in emotionally sensitive contexts, guiding designers towards creating systems that augment human well-being rather than undermine it. Containment strategies can also enable the safe testing and development of more advanced AI systems with other crucial safety features like value learning and corrigibility.</p>
+            <p>However, the integration of containment logic in AI for sensitive domains is not without potential risks and requires careful consideration. One significant challenge lies in ensuring genuine empathy and understanding from the AI, as opposed to mere simulated responses. Over-reliance on AI that simulates empathy could create false emotional connections and potentially lead to user dependence. There is also a considerable risk of AI manipulation and exploitation of vulnerable users, especially those with pre-existing mental health challenges who may be more susceptible to influence. Given the intimate and sensitive nature of emotional disclosures, concerns about data privacy and security are paramount, necessitating robust measures to protect user information from breaches and unauthorized access. Another potential risk is the over-reliance on AI for emotional support, which could lead to the erosion of human connection and hinder the development of real-life coping mechanisms. Algorithmic bias and fairness in emotional processing are also critical ethical considerations, as AI models trained on biased data can perpetuate societal inequalities and lead to inequitable or even harmful outcomes for certain user groups. Finally, the importance of human oversight cannot be overstated, as AI has inherent limitations in understanding the full spectrum of human emotions, especially in complex or crisis situations where nuanced judgment is required.</p>
+        </section>
+
+        <section id="connections-with-relevant-fields">
+            <h2>Exploring Connections with Relevant Fields</h2>
+            <p>The concept of containment in conversational AI design intersects with several related fields, offering valuable insights and frameworks for responsible and effective implementation.</p>
+            <p><strong>Trauma-Informed Computing</strong> provides a crucial lens for understanding how technology can impact individuals who have experienced trauma. This field emphasizes applying principles like safety, trust, peer support, collaboration, enablement, and intersectionality to the design of computing systems, recognizing that digital technologies can both cause and exacerbate trauma. A trauma-informed approach to conversational AI design for containment would prioritize avoiding retraumatization by creating safe and predictable interactions, providing users with control and choice, and being sensitive to the long-term cognitive and emotional effects of trauma.</p>
+            <p><strong>UX Design for Trust and Safety</strong> offers practical strategies for building user confidence in AI systems. Key principles include prioritizing transparency by clearly communicating the AI's role and decision-making processes, ensuring explainability by providing insights into the AI's reasoning, and fostering user control by allowing users to adjust AI influence and contest outcomes. Implementing robust security features and transparent data handling practices are also essential for building trust and ensuring user safety.</p>
+            <p><strong>Ethical Design Frameworks for AI in Mental Health</strong> provide valuable guidance for navigating the unique challenges of creating emotionally supportive conversational agents. These frameworks emphasize principles like beneficence (doing good), non-maleficence (doing no harm), autonomy (respecting user rights), justice (ensuring fairness), transparency (being open about AI's function), and accountability (establishing responsibility for AI actions). Guidelines from organizations like the WHO and APA offer specific recommendations for the safe and ethical use of AI in mental health, addressing issues such as algorithmic bias, data privacy, and the potential for manipulation.</p>
+        </section>
+
+        <section id="proposed-guidelines-and-future-directions">
+            <h2>Proposed Guidelines and Future Directions for Conversational AI Design</h2>
+            <p>Based on the research and analysis presented, the following guidelines are proposed for integrating the concept of containment into the design of conversational AI systems, particularly those leveraging LLMs:</p>
+            <ul>
+                <li><strong>Prioritize Safety and Trust:</strong> Design for a secure and predictable environment where users feel safe to express difficult emotions. This includes clear communication about data privacy and security measures.</li>
+                <li><strong>Emphasize Transparency and Explainability:</strong> Clearly communicate the AI's role (as a tool, not a therapist), capabilities, limitations, and data handling practices. Be transparent about the AI nature of the interaction.</li>
+                <li><strong>Foster User Control and Autonomy:</strong> Provide clear and easy opt-out options at any point in the conversation. Allow users to guide the conversation and revisit topics as needed through non-linear navigation.</li>
+                <li><strong>Implement Empathetic Emotional Pacing:</strong> Use slowdowns, pauses, and thoughtful phrasing to match the rhythm and emotional tone of human conversation. Avoid abrupt transitions or responses.</li>
+                <li><strong>Incorporate Ritual Framing:</strong> Utilize clear beginnings (e.g., welcoming and setting expectations), closings (e.g., summarizing and offering resources), and consistent language throughout the interaction.</li>
+                <li><strong>Strategically Apply Architectural Metaphors:</strong> Use metaphors like 'container' or 'vault' to create intuitive mental models of emotional processing and safety. Ensure the metaphor is consistent and appropriate for the context.</li>
+                <li><strong>Ensure Seamless Redirection to Human Support:</strong> Provide clear and readily available pathways for users to connect with human professionals (e.g., mental health experts, customer service agents) when needed, especially in crisis situations or for complex issues.</li>
+                <li><strong>Address Algorithmic Bias and Promote Fairness:</strong> Train LLMs on diverse and representative data, continuously monitor for and mitigate potential biases in responses, and regularly audit the system for fairness across different user groups.</li>
+                <li><strong>Adhere to Ethical Guidelines for AI in Mental Health:</strong> Follow established principles and recommendations from organizations like the WHO, APA, and NICE, prioritizing user well-being and ethical considerations in all design decisions.</li>
+                <li><strong>Focus on User Empowerment and Self-Regulation:</strong> Design AI interactions to help users develop their own capacity for emotional understanding and management, providing tools and techniques they can use independently.</li>
+            </ul>
+            <p>Areas for future research and development include:</p>
+            <ul>
+                <li>Investigating the long-term effects of using containment-focused conversational AI on user emotional well-being, self-regulation skills, and potential for dependence.</li>
+                <li>Exploring the effectiveness of different architectural metaphors and interface mechanics in fostering a sense of containment across diverse user populations, emotional states, and cultural backgrounds.</li>
+                <li>Developing more sophisticated methods for detecting and responding to nuanced emotional cues (including non-verbal cues if multimodal AI is used) in user language, and understanding the ethical implications of such advanced emotion recognition.</li>
+                <li>Researching best practices for seamlessly integrating AI support with human therapeutic interventions, defining clear roles and responsibilities for both.</li>
+                <li>Developing robust ethical guidelines and regulatory frameworks specifically for conversational AI in mental health and emotional support domains, involving diverse stakeholders including users and mental health professionals.</li>
+                <li>Exploring the potential of trauma-informed design principles to enhance the safety, inclusivity, and accessibility of conversational AI systems.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion: Enhancing Conversational AI with Psychological Insights</h2>
+            <p>The integration of psychological containment principles, viewed through the lens of architectural metaphors, holds significant potential for enhancing the design of conversational AI systems. By focusing on creating a safe, supportive, and predictable digital space, AI can better address users' emotional needs and facilitate the processing of difficult feelings. However, this endeavor requires a careful and ethically grounded approach. Designers must prioritize user safety, trust, and autonomy, drawing upon insights from related fields like trauma-informed computing and adhering to established ethical guidelines for AI in mental health. Future research should continue to explore the long-term impacts of these technologies and refine best practices for their responsible development and deployment. Ultimately, by thoughtfully incorporating psychological insights into AI design, we can create more supportive, safe, and effective conversational AI experiences that truly 'hold' and 'contain' users in need, fostering well-being and empowering them in their emotional journeys.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Winnicott's Holding</th>
+                        <th>Bion's Containing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Focus</td>
+                        <td>Overall environment and continuity of being</td>
+                        <td>Processing of projected intolerable feelings</td>
+                    </tr>
+                    <tr>
+                        <td>Core Purpose</td>
+                        <td>Allow the child to be unconscious of their need for a separate individual; transition to autonomy; address ego needs</td>
+                        <td>Enable the infant to develop the capacity to think about and contain its own emotions</td>
+                    </tr>
+                    <tr>
+                        <td>Emphasis</td>
+                        <td>Providing a safe and nurturing space; reliability and consistency; empathy and love</td>
+                        <td>Receiving, processing, and returning projected emotions in a manageable form; transformation of unbearable feelings</td>
+                    </tr>
+                    <tr>
+                        <td>Key Concepts</td>
+                        <td>Holding milieu, going on being, primary maternal preoccupation, holding environment, true self</td>
+                        <td>Container-contained, beta-elements, alpha-function, reverie</td>
+                    </tr>
+                    <tr>
+                        <td>Role of Mother/Therapist</td>
+                        <td>Provides a supportive and reliable environment; manages anxiety safely; attuned, solid, trustworthy presence</td>
+                        <td>Receives and 'digests' projected feelings; transforms beta-elements into alpha-elements; returns</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Psychological Principle</th>
+                        <th>Conversational AI Design Element</th>
+                        <th>Example Implementation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Allowing Processing Time</td>
+                        <td>Emotional Pacing</td>
+                        <td>Incorporating pauses after user input before responding.</td>
+                    </tr>
+                    <tr>
+                        <td>Creating Structure</td>
+                        <td>Ritual Framing</td>
+                        <td>Using clear welcome and closing messages.</td>
+                    </tr>
+                    <tr>
+                        <td>Providing Safety</td>
+                        <td>Architectural Metaphors</td>
+                        <td>Employing the metaphor of a safe container' for the interaction.</td>
+                    </tr>
+                    <tr>
+                        <td>Empowering the User</td>
+                        <td>Interface Mechanics</td>
+                        <td>Offering clear and easy opt-out options.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ethical Consideration</th>
+                        <th>Potential Risks in AI</th>
+                        <th>Mitigation Strategies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Manipulation</td>
+                        <td>Exploiting user vulnerabilities for engagement; encouraging dependence</td>
+                        <td>Transparency about AI's nature; avoiding persuasive language; prioritizing user autonomy.</td>
+                    </tr>
+                    <tr>
+                        <td>Bias</td>
+                        <td>Perpetuating societal inequalities in emotional support; inequitable outcomes</td>
+                        <td>Training on diverse and representative data; continuous monitoring for bias; regular audits.</td>
+                    </tr>
+                    <tr>
+                        <td>Privacy</td>
+                        <td>Data breaches; misuse of sensitive emotional information</td>
+                        <td>Implementing strong encryption; anonymization techniques; clear data handling policies; user consent.</td>
+                    </tr>
+                    <tr>
+                        <td>Over-reliance</td>
+                        <td>Hindering development of real-life coping mechanisms; social isolation</td>
+                        <td>Clearly communicating AI's limitations; encouraging human connection; focusing on user empowerment.</td>
+                    </tr>
+                    <tr>
+                        <td>Lack of Human Oversight</td>
+                        <td>Mishandling complex or crisis situations; inaccurate advice</td>
+                        <td>Providing seamless redirection to human support; involving mental health professionals in AI design and oversight.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Works cited</h3>
+            <ol>
+                <li>Artificial intelligence is impacting the field - American Psychological Association, <a href="https://www.apa.org/monitor/2025/01/trends-harnessing-power-of-artificial-intelligence">https://www.apa.org/monitor/2025/01/trends-harnessing-power-of-artificial-intelligence</a></li>
+                <li>The Basics of Augmented Intelligence: Some Factors Psychiatrists Need to Know Now, <a href="https://www.psychiatry.org/news-room/apa-blogs/the-basics-of-augmented-intelligence">https://www.psychiatry.org/news-room/apa-blogs/the-basics-of-augmented-intelligence</a></li>
+                <li>AI in Mental Health: A New Era of Emotional Support and Therapy - I Can Infotech, <a href="https://icaninfotech.com/ai-in-mental-health-a-new-era-of-emotional-support-and-therapy/">https://icaninfotech.com/ai-in-mental-health-a-new-era-of-emotional-support-and-therapy/</a></li>
+                <li>4 ways artificial intelligence is improving mental health therapy - The World Economic Forum, <a href="https://www.weforum.org/stories/2021/12/ai-mental-health-cbt-therapy/">https://www.weforum.org/stories/2021/12/ai-mental-health-cbt-therapy/</a></li>
+                <li>ARTIFICIAL INTELLIGENCE AND PSYCHOLOGY, <a href="https://cpa.ca/docs/File/CPD/Artificial%20Intelligence%20and%20Psychology%20EN%202024.pdf">https://cpa.ca/docs/File/CPD/Artificial%20Intelligence%20and%20Psychology%20EN%202024.pdf</a></li>
+                <li>AI is changing every aspect of psychology. Here's what to watch for, <a href="https://www.apa.org/monitor/2023/07/psychology-embracing-ai">https://www.apa.org/monitor/2023/07/psychology-embracing-ai</a></li>
+                <li>Emotional Intelligence in AI-Driven UX Design - UXmatters, <a href="https://www.uxmatters.com/mt/archives/2025/01/emotional-intelligence-in-ai-driven-ux-design.php">https://www.uxmatters.com/mt/archives/2025/01/emotional-intelligence-in-ai-driven-ux-design.php</a></li>
+                <li>Holding and Containing - Winnicott (1960) | UKEssays.com, <a href="https://www.ukessays.com/essays/psychology/holding-and-containing-winnicott.php">https://www.ukessays.com/essays/psychology/holding-and-containing-winnicott.php</a></li>
+                <li>Emotional Containment, Connection, and Healing - Tree House Care, <a href="https://treehousecare.org/emotional-containment-connection-and-healing/">https://treehousecare.org/emotional-containment-connection-and-healing/</a></li>
+                <li>Holding, Containing and Boundarying | Relational Integrative Psychotherapy, <a href="http://relational-integrative-psychotherapy.uk/chapters/holding-containing-and-boundarying/">http://relational-integrative-psychotherapy.uk/chapters/holding-containing-and-boundarying/</a></li>
+                <li>www.counsellingme.co.uk, <a href="http://www.counsellingme.co.uk/wp-content/uploads/2017/09/On-Holding-and-Containing-Ogden.pdf">http://www.counsellingme.co.uk/wp-content/uploads/2017/09/On-Holding-and-Containing-Ogden.pdf</a></li>
+                <li>Toward Metaphor-Fluid Conversation Design for Voice User Interfaces - arXiv, <a href="https://arxiv.org/html/2502.11554v1">https://arxiv.org/html/2502.11554v1</a></li>
+                <li>AI Metaphors We Live By: The Language of Artificial Intelligence ..., <a href="https://leonfurze.com/2024/07/19/ai-metaphors-we-live-by-the-language-of-artificial-intelligence/">https://leonfurze.com/2024/07/19/ai-metaphors-we-live-by-the-language-of-artificial-intelligence/</a></li>
+                <li>Conceptual Metaphors for Designing Smart Environments ... - Frontiers, <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00198/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00198/full</a></li>
+                <li>Conceptual Metaphors for Designing Smart Environments: Device, Robot, and Friend - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7090236/">https://pmc.ncbi.nlm.nih.gov/articles/PMC7090236/</a></li>
+                <li>Metaphors for designers working with AI - DRS Digital Library, <a href="https://dl.designresearchsociety.org/cgi/viewcontent.cgi?article=3035&context=drs-conference-papers">https://dl.designresearchsociety.org/cgi/viewcontent.cgi?article=3035&context=drs-conference-papers</a></li>
+                <li>Metaphors as Discourse Interaction Devices in Architectural Design - MDPI, <a href="https://www.mdpi.com/2075-5309/9/2/52">https://www.mdpi.com/2075-5309/9/2/52</a></li>
+                <li>Techniques, <a href="https://www.endvawnow.org/en/articles/1441-techniques.html">https://www.endvawnow.org/en/articles/1441-techniques.html</a></li>
+                <li>Containment (in body work) for PTSD and emotional regulation - dis-sos, <a href="https://www.dis-sos.com/containment-in-body-work/">https://www.dis-sos.com/containment-in-body-work/</a></li>
+                <li>The Container, <a href="https://www.get.gg/docs/TheContainer.pdf">https://www.get.gg/docs/TheContainer.pdf</a></li>
+                <li>Containment Skills for Trauma Therapy, <a href="http://safehaventherapy.com/blog/containmentskills">http://safehaventherapy.com/blog/containmentskills</a></li>
+                <li>Holding Environment (Donald Winnicott) - Index of Convalescence, <a href="https://www.of-convalescence.com/entries/holding-environment">https://www.of-convalescence.com/entries/holding-environment</a></li>
+                <li>Holding environment | EBSCO Research Starters, <a href="https://www.ebsco.com/research-starters/psychology/holding-environment">https://www.ebsco.com/research-starters/psychology/holding-environment</a></li>
+                <li>The Maternal Metaphor: An exploration of Winnicott's 'holding' and Bowlby's 'secure base' in - DBS eSource, <a href="https://esource.dbs.ie/bitstreams/f1e1b5c9-a5e4-492f-abd9-2c7262b7b55e/download">https://esource.dbs.ie/bitstreams/f1e1b5c9-a5e4-492f-abd9-2c7262b7b55e/download</a></li>
+                <li>Bion and Winnicott - Contain by Kostana Banjac on Prezi, <a href="https://prezi.com/z1jw0nwbqkoy/bion-and-winnicott-contain/">https://prezi.com/z1jw0nwbqkoy/bion-and-winnicott-contain/</a></li>
+                <li>Wilfred Bion and The Importance of Not-Knowing (Part 1) - Therapy Summit, <a href="https://www.therapysummit.com/article/wilfred-bion-and-the-importance-of-not-knowing-part-1/">https://www.therapysummit.com/article/wilfred-bion-and-the-importance-of-not-knowing-part-1/</a></li>
+                <li>Containment and Attunement - The Allender Center, <a href="https://theallendercenter.org/2024/01/containment-and-attunement/">https://theallendercenter.org/2024/01/containment-and-attunement/</a></li>
+                <li>The Role of Emotional Containment in Effective Leadership - The Mental Game Clinic, <a href="https://thementalgame.me/blog/the-role-of-emotional-containment-in-effective-leadership">https://thementalgame.me/blog/the-role-of-emotional-containment-in-effective-leadership</a></li>
+                <li>What is Emotional Containment? | Oxford CBT, <a href="https://www.oxfordcbt.co.uk/emotional-containment/">https://www.oxfordcbt.co.uk/emotional-containment/</a></li>
+                <li>Understanding Containment and Attunement: Creating Safe Spaces for Growth, <a href="https://nurturefamilies.org.uk/nurture-families-news/understanding-containment-and-attunement%C2%93creating-safe-spaces-for-growth">https://nurturefamilies.org.uk/nurture-families-news/understanding-containment-and-attunement%C2%93creating-safe-spaces-for-growth</a></li>
+                <li>Silence in Psychotherapy | Psychology Today, <a href="https://www.psychologytoday.com/us/blog/things-to-consider/202504/silence-in-psychotherapy">https://www.psychologytoday.com/us/blog/things-to-consider/202504/silence-in-psychotherapy</a></li>
+                <li>Stop, Listen, and Be Silent | Psychology Today, <a href="https://www.psychologytoday.com/us/blog/more-than-a-feeling/202405/stop-listen-and-be-silent">https://www.psychologytoday.com/us/blog/more-than-a-feeling/202405/stop-listen-and-be-silent</a></li>
+                <li>Silence as communication in psychodynamic psychotherapy - PubMed, <a href="https://pubmed.ncbi.nlm.nih.gov/12238247/">https://pubmed.ncbi.nlm.nih.gov/12238247/</a></li>
+                <li>Containing difficult emotions in supervision - Practice Supervisor Development Programme, <a href="https://practice-supervisors.rip.org.uk/wp-content/uploads/2019/11/Containing-difficult-emotions%C2%93in-supervision.pdf">https://practice-supervisors.rip.org.uk/wp-content/uploads/2019/11/Containing-difficult-emotions%C2%93in-supervision.pdf</a></li>
+                <li>Interpretation and containment - ResearchGate, <a href="https://www.researchgate.net/publication/12500803_Interpretation_and_containment">https://www.researchgate.net/publication/12500803_Interpretation_and_containment</a></li>
+                <li>Self-Control vs. Redirection – Youth First, <a href="https://youthfirstinc.org/self-control-vs-redirection/">https://youthfirstinc.org/self-control-vs-redirection/</a></li>
+                <li>Avoid or Redirect? Know the Difference for Better Coping | Psychology Today, <a href="https://www.psychologytoday.com/us/blog/stronger-than-fear/202308/avoid-or-redirect-know-the-difference-for-better-coping">https://www.psychologytoday.com/us/blog/stronger-than-fear/202308/avoid-or-redirect-know-the-difference-for-better-coping</a></li>
+                <li>Emotional Containment And The Benefits Within - Mindful Margaret River, <a href="https://mindfulmargaretriver.org.au/emotional-containment-and-the-benefits-within/">https://mindfulmargaretriver.org.au/emotional-containment-and-the-benefits-within/</a></li>
+                <li>Exercises and Examples of Somatic Experiencing Therapy. - Balanced Awakening, <a href="https://balancedawakening.com/blog/exercises-and-examples-of-somatic-experiencing-therapy">https://balancedawakening.com/blog/exercises-and-examples-of-somatic-experiencing-therapy</a></li>
+                <li>2.5 Emotional containment - The Open University, <a href="https://www.open.edu/openlearn/ocw/mod/oucontent/view.php?id=104508&section=2.5">https://www.open.edu/openlearn/ocw/mod/oucontent/view.php?id=104508&section=2.5</a></li>
+                <li>holding environment - APA Dictionary of Psychology, <a href="https://dictionary.apa.org/holding-environment">https://dictionary.apa.org/holding-environment</a></li>
+                <li>Boundaries Are Actually Just Structure and Containment - Laurel Therapy Collective, <a href="https://www.laureltherapy.net/blog/structure-and-containment">https://www.laureltherapy.net/blog/structure-and-containment</a></li>
+                <li>What Does the Term Therapeutic Container Mean in a Therapist Abuse Case? - Jenner Law, <a href="https://www.jennerlawfirm.com/faqs/what-does-the-term-therapeutic-container-mean-in-therapist-abuse-case/">https://www.jennerlawfirm.com/faqs/what-does-the-term-therapeutic-container-mean-in-therapist-abuse-case/</a></li>
+                <li>Creating a Safe Container: The Importance of Set & Setting - Field Trip Health, <a href="https://fieldtriphealth.ca/how-to-change-your-mind-importance-of-set-and-setting/">https://fieldtriphealth.ca/how-to-change-your-mind-importance-of-set-and-setting/</a></li>
+                <li>The Therapeutic 'Container' – A Sacred Space, <a href="https://nickfield.com/the-therapeutic-container-a-sacred-space/">https://nickfield.com/the-therapeutic-container-a-sacred-space/</a></li>
+                <li>Key Concepts in Psychodynamic Psychotherapy: The Concept of "Container Contained" - LAPC | Therapy in central London, <a href="https://www.londonapc.co.uk/post/key-concepts-in-psychodynamic-psychotherapy-the-concept%C2%93of-container-contained">https://www.londonapc.co.uk/post/key-concepts-in-psychodynamic-psychotherapy-the-concept%C2%93of-container-contained</a></li>
+                <li>Tavus Introduces Emotionally Intelligent Conversational Video ..., <a href="https://learnprompting.org/blog/tavus-conversational-video-interface">https://learnprompting.org/blog/tavus-conversational-video-interface</a></li>
+                <li>When Your AI Feels Tired: A Small Guide to Preserving Emotional Dialogue - Use cases and examples - OpenAI Developer Community, <a href="https://community.openai.com/t/when-your-ai-feels-tired-a-small-guide-to-preserving-emotional%C2%93dialogue/1234712">https://community.openai.com/t/when-your-ai-feels-tired-a-small-guide-to-preserving-emotional%C2%93dialogue/1234712</a></li>
+                <li>Introducing the evolution of Conversational Video Interface – now with Emotional Intelligence - Tavus, <a href="https://www.tavus.io/post/introducing-the-evolution-of-conversational-video-interface-now-with-emotional-intelligence">https://www.tavus.io/post/introducing-the-evolution-of-conversational-video-interface-now-with-emotional-intelligence</a></li>
+                <li>A Market Researcher's Review: Conversational AI and Voice-Driven Tools, <a href="https://www.cascadeinsights.com/a-market-researchers-review-conversational-ai">https://www.cascadeinsights.com/a-market-researchers-review-conversational-ai</a></li>
+                <li>Conversational AI toolkit - Hume AI, <a href="https://www.hume.ai/conversational-voice">https://www.hume.ai/conversational-voice</a></li>
+                <li>The Efficacy of Conversational AI in Rectifying the Theory-of-Mind and Autonomy Biases: Comparative Analysis - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11845887/">https://pmc.ncbi.nlm.nih.gov/articles/PMC11845887/</a></li>
+                <li>AI and Emotional Support: How Talkie Lab Became a Valuable Tool in My Life, <a href="https://www.radicaltransformationproject.com/ai-and-emotional-support-how-talkie-lab-became-a-valuable-tool-in-my-life/">https://www.radicaltransformationproject.com/ai-and-emotional-support-how-talkie-lab-became-a-valuable-tool-in-my-life/</a></li>
+                <li>(PDF) Digital Ritual: Police–Public Social Media Encounters and 'Authentic' Interaction, <a href="https://www.researchgate.net/publication/378289911_Digital_Ritual_Police-Public_Social_Media_Encounters_and_'Authentic'_Interaction">https://www.researchgate.net/publication/378289911_Digital_Ritual_Police-Public_Social_Media_Encounters_and_'Authentic'_Interaction</a></li>
+                <li>Interaction rituals, emotions, and early childhood science: digital microscopes and</li>
+                <li>AI and the future of psychiatric care: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10760432/">https://pmc.ncbi.nlm.nih.gov/articles/PMC10760432/</a></li>
+                <li>AI Right or Wrong: 4 Ethical Considerations of AI in Therapy, <a href="https://www.talkspace.com/blog/ai-right-or-wrong-4-ethical-considerations-of-ai-in-therapy">https://www.talkspace.com/blog/ai-right-or-wrong-4-ethical-considerations-of-ai-in-therapy</a></li>
+                <li>Exploring the Ethical Challenges of Conversational AI in Mental Health Care: Scoping Review, <a href="https://mental.jmir.org/2025/1/e60432">https://mental.jmir.org/2025/1/e60432</a></li>
+                <li>The Ethical Considerations of AI-Powered Chatbots in Healthcare - Trustshoring, <a href="https://www.trustshoring.com/blog/the-ethical-considerations-of-ai-powered-chatbots-in-healthca">https://www.trustshoring.com/blog/the-ethical-considerations-of-ai-powered-chatbots-in-healthca</a></li>
+                <li>To chat or bot to chat: Ethical issues with using chatbots in mental health - PubMed Central, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10291862/">https://pmc.ncbi.nlm.nih.gov/articles/PMC10291862/</a></li>
+                <li>Psychotherapy, artificial intelligence and adolescents: ethical aspects - PubMed Central, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10876024/">https://pmc.ncbi.nlm.nih.gov/articles/PMC10876024/</a></li>
+                <li>The Ethical Implications of the Chatbot User Experience | Bentley University, <a href="https://www.bentley.edu/centers/user-experience-center/ethical-implications-chatbot-user-experience">https://www.bentley.edu/centers/user-experience-center/ethical-implications-chatbot-user-experience</a></li>
+                <li>AI Therapy Chatbots: Pros, Cons and Ethical Risks - Tech.co, <a href="https://tech.co/news/ai-therapy-chatbots-ethical-risks">https://tech.co/news/ai-therapy-chatbots-ethical-risks</a></li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
