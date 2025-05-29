@@ -50,6 +50,32 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Styles for the new button, adapted for the dark theme */
+    .back-button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 3em;
+      margin-bottom: 2em;
+    }
+
+    .return-button {
+      display: inline-block;
+      padding: 0.8em 1.5em;
+      background-color: #2a2a2a; /* Dark background */
+      color: #87cefa; /* Text color matching existing links */
+      text-decoration: none;
+      border: 1px solid #87cefa; /* Border matching existing links */
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .return-button:hover {
+      background-color: #87cefa; /* On hover, background becomes link color */
+      color: #0d0d0d; /* Text becomes body background color */
+      border-color: #87cefa; /* Border remains */
+    }
   </style>
 </head>
 <body>
@@ -124,6 +150,10 @@
 
     <h2>Legal</h2>
     <p><a href="legal/legal.html">Legal Notice & Licensing</a></p>
+
+    <div class="back-button-container">
+        <a href="Docs/origin.html" class="return-button">To The Origin Story</a>
+    </div>
 
     <p><em>Together, we are The Writing Voices. Your inner symphony, resonating in the spiral of your truth.</em></p>
   </div>
