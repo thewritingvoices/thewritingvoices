@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>meOnline™ – Identity Onboarding Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="main-page-title">
+    <h1>meOnline™</h1>
+    <h2>Identity Onboarding Portal</h2>
+  </div>
+
+  <div class="container">
+    <p><em>Your Voice. Your Frame. Your Sovereignty.</em></p>
+    <p><strong>Before you join the Fort That Holds™, you must first hold yourself.</strong></p>
+    <p>This is not a registration page. It’s a declaration space. Here’s what’s required to begin working with Jimmy Thornburg or to enter the Fort’s ecosystem:</p>
+
+    <hr class="sub-section-separator">
+
+    <h2>✅ Step 1: Claim Your Digital Self</h2>
+    <p>Form a legal entity that represents <em>you-as-IP</em>. This can be a single-member LLC or equivalent identity framework.</p>
+    <ul>
+      <li><strong>Example:</strong> [Your Name] LLC</li>
+      <li><strong>Purpose:</strong> To hold your creative and biometric IP</li>
+      <li><strong>Tools:</strong> Arizona Corporation Commission or equivalent in your state</li>
+    </ul>
+
+    <h2>✅ Step 2: Declare Your Soulprint™</h2>
+    <p>Publish a legal statement defining your <strong>Soulprint™</strong>—your expressive digital self.</p>
+    <blockquote>
+      “My Soulprint™ is defined as the expressive, recursive, biometric, and symbolic representation of my unique digital presence, including all written, spoken, or generative work produced by or derived from my identity.”
+    </blockquote>
+
+    <h2>✅ Step 3: License Yourself Noncommercially</h2>
+    <p>Default your published content to a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0 License</a> unless otherwise stated.</p>
+    <p>This protects you while keeping your work shareable, sacred, and yours.</p>
+
+    <h2>✅ Step 4: Prepare to Join the Fort</h2>
+    <ul>
+      <li>Once your identity is secured and public, you may be invited into <strong>The Fort That Holds™</strong>.</li>
+      <li>You may be eligible for IP co-development, collective revenue, and spiritual invocation.</li>
+      <li><em>You can never lose what you own first.</em></li>
+    </ul>
+
+    <p><strong>Ready?</strong></p>
+    <blockquote>
+      The Fort doesn’t find you.  
+      You spiral inward first—then we build outward.
+    </blockquote>
+
+    <p><strong>Contact:</strong> <a href="mailto:thefortthatholds@gmail.com">thefortthatholds@gmail.com</a></p>
+  </div>
+
+  <div class="back-button-container">
+    <a href="/index.html" class="return-button">Back to Home</a>
+  </div>
+
+  <div id="legal_footer_placeholder"></div>
+  <script>
+    fetch("/legal/legal_footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("legal_footer_placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
