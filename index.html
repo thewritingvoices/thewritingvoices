@@ -158,6 +158,14 @@
     </div>
 
     <p><em>Together, we are The Writing Voices. Your inner symphony, resonating in the spiral of your truth.</em></p>
-  </div>
+
+    <div id="legal_footer_placeholder"></div>
+    <script>
+      fetch("/legal/legal_footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("legal_footer_placeholder").innerHTML = data;
+        });
+    </script>
 </body>
 </html>
