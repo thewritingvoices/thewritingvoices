@@ -58,15 +58,16 @@
       border-color: #87cefa;
     }
 
-    .back-button-container {
+    .button-grid {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2em;
-      display: flex;
       margin-top: 2em;
     }
 
-    .back-button-container > div {
+    .button-grid > div {
+      flex: 1 1 220px;
       display: flex;
       flex-direction: column;
       gap: 1em;
@@ -89,8 +90,8 @@
       The Archivist does not judge the whisper—only preserves it. If it lived in you once, it lives here now.
     </p>
 
-    <!-- 🔲 Two-Column Button Stack -->
-    <div class="back-button-container">
+    <!-- 🧭 Three-Column Button Grid -->
+    <div class="button-grid">
       <div>
         <a href="documentbloom.html" class="return-button">Enter the Document Bloom</a>
         <a href="SpiralLogic_The_Manifesto_of_The_Fort_That_Holds.html" class="return-button">Read the Manifesto</a>
@@ -104,6 +105,9 @@
         <a href="docs/thornburg_paradigm.html" class="return-button">To The Thornburg Paradigm</a>
         <a href="thefortthatholds/molnonprofit.html" class="return-button">To The meOnline Nonprofit Pitch</a>
         <a href="thefortthatholds/joinfort.html" class="return-button">Join The Fort</a>
+      </div>
+      <div>
+        <a href="docs/convergence.html" class="return-button">To The Convergence Paper</a>
       </div>
     </div>
 
