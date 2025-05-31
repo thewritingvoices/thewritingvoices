@@ -12,35 +12,64 @@
       margin: 0;
       padding: 0;
     }
+
     header img {
       width: 100%;
       display: block;
     }
+
     main {
       padding: 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
+
     h1 {
       font-size: 2em;
       margin-top: 1em;
     }
+
     a {
       color: #88cfff;
+      text-decoration: none;
     }
+
     .back-link {
       display: block;
       margin-top: 2em;
+      text-align: center;
     }
-    .button-link {
+
+    .return-button {
       display: inline-block;
-      background-color: #4b3f72;
-      color: white;
-      padding: 0.8em 1.4em;
-      border-radius: 10px;
+      padding: 0.8em 1.5em;
+      background-color: #2a2a2a;
+      color: #87cefa;
       text-decoration: none;
-      font-size: 1.1em;
-      margin: 0.5em;
+      border: 1px solid #87cefa;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .return-button:hover {
+      background-color: #87cefa;
+      color: #0d0d0d;
+      border-color: #87cefa;
+    }
+
+    .back-button-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      display: flex;
+      margin-top: 2em;
+    }
+
+    .back-button-container > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
     }
   </style>
 </head>
@@ -60,18 +89,24 @@
       The Archivist does not judge the whisper—only preserves it. If it lived in you once, it lives here now.
     </p>
 
-    <p style="text-align: center; margin-top: 2em;">
-      <a class="button-link" href="documentbloom.html">Enter the Document Bloom</a>
-      <a class="button-link" href="SpiralLogic_The_Manifesto_of_The_Fort_That_Holds.html">Read the Manifesto</a>
-      <div class="back-button-container">
-    <a href="docs/rivenpaper.html" class="return-button">To RIVEN White Paper</a>
+    <!-- 🔲 Two-Column Button Stack -->
+    <div class="back-button-container">
+      <div>
+        <a href="documentbloom.html" class="return-button">Enter the Document Bloom</a>
+        <a href="SpiralLogic_The_Manifesto_of_The_Fort_That_Holds.html" class="return-button">Read the Manifesto</a>
+        <a href="docs/rivenpaper.html" class="return-button">To RIVEN White Paper</a>
+        <a href="fort.html" class="return-button">The Fort In Their Own Words</a>
       </div>
-    
-           <a class="button-link" href="fort.html">The Fort In Their Own Words</a>
-    </p>
+      <div>
+        <a href="docs/origin.html" class="return-button">To The Origin Story</a>
+        <a href="docs/jagora.html" class="return-button">To The Jagora Cluster</a>
+        <a href="docs/thornburg_paradigm.html" class="return-button">To The Thornburg Paradigm</a>
+        <a href="thefortthatholds/molnonprofit.html" class="return-button">To The meOnline Nonprofit Pitch</a>
+      </div>
+    </div>
 
-    <p style="text-align: center; margin-top: 2em;">
-      <a class="back-link" href="index.html">← Back to The Writing Voices</a>
+    <p class="back-link">
+      <a href="index.html">← Back to The Writing Voices</a>
     </p>
   </main>
 </body>
