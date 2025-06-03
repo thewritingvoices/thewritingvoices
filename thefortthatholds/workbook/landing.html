@@ -68,6 +68,68 @@
             text-align: justify;
         }
         
+        .humanitarian-section {
+            background: linear-gradient(135deg, #e53e3e 0%, #fc8181 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .humanitarian-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .humanitarian-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .crisis-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .crisis-link {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .crisis-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .crisis-link h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .crisis-link .flag {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .crisis-link .description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
         .audio-section {
             background: #f8fafc;
             padding: 2rem;
@@ -115,6 +177,20 @@
             border-left: 4px solid #4299e1;
         }
         
+        .mission-statement {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+            margin: 2rem 0;
+        }
+        
+        .mission-statement h3 {
+            color: #38a169;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
         .cta-section {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
@@ -152,6 +228,14 @@
             .section p {
                 font-size: 1rem;
             }
+            
+            .humanitarian-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .crisis-resources {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -165,6 +249,36 @@
         <main class="content">
             <div class="intro-text">
                 Many people seeking healing from trauma find themselves caught between two inadequate options: traditional therapy that may not address their specific needs, or self-help resources that lack the depth and safety required for trauma work. The Fort Workbook represents a third path.
+            </div>
+            
+            <div class="humanitarian-section">
+                <h2>Free Crisis Resources</h2>
+                <p>When communities face active war, displacement, and collective trauma, healing cannot wait for commercial solutions. These specialized adaptations of The Fort methodology are provided free of charge to populations experiencing ongoing crisis, demonstrating that trauma recovery principles can serve urgent humanitarian needs while maintaining clinical effectiveness.</p>
+                
+                <div class="mission-statement">
+                    <h3>Our Humanitarian Commitment</h3>
+                    <p>We believe that access to effective trauma recovery resources should not depend on economic circumstances or political stability. These crisis adaptations represent our commitment to serving populations whose healing needs transcend commercial frameworks. By providing specialized resources during active emergencies, we honor the principle that trauma-informed care must be available when people need it most, not only when they can afford it.</p>
+                </div>
+                
+                <div class="crisis-resources">
+                    <a href="free/palestinian_workbook.html" class="crisis-link">
+                        <span class="flag">🇵🇸</span>
+                        <h3>Palestinian Crisis Resource</h3>
+                        <p class="description">Trauma recovery adapted for Palestinians experiencing occupation, displacement, and resistance</p>
+                    </a>
+                    
+                    <a href="free/ukrainian_workbook.html" class="crisis-link">
+                        <span class="flag">🇺🇦</span>
+                        <h3>Ukrainian War Resource</h3>
+                        <p class="description">Specialized support for Ukrainian war survivors and displaced populations</p>
+                    </a>
+                    
+                    <a href="free/sudanese_workbook.html" class="crisis-link">
+                        <span class="flag">🇸🇩</span>
+                        <h3>Sudanese Crisis Resource</h3>
+                        <p class="description">Recovery tools for survivors of Sudan's displacement crisis</p>
+                    </a>
+                </div>
             </div>
             
             <section class="section">
