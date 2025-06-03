@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قلعة الصمود: دليل التعافي من صدمة الحرب</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Tahoma', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #c41e3a;
+        }
+
+        .title {
+            font-size: 2.5em;
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .attribution {
+            font-size: 1em;
+            color: #888;
+            font-style: italic;
+        }
+
+        .back-navigation {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #666;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h1 {
+            color: #c41e3a;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #c41e3a;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #c41e3a;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .section h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .quote {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-right: 4px solid #c41e3a;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .contents {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .contents ul {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .contents li {
+            margin-bottom: 8px;
+            padding: 5px;
+        }
+
+        .contents li:before {
+            content: "◄ ";
+            color: #c41e3a;
+            font-weight: bold;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .warning h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid #c41e3a;
+        }
+
+        .exercise h4 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+        }
+
+        .exercise p {
+            margin-bottom: 10px;
+        }
+
+        .exercise-prompt {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .legal_footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            border-top: 3px solid #c41e3a;
+            background-color: #f9f9f9;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .legal_footer p {
+            margin-bottom: 10px;
+        }
+
+        .legal_footer a {
+            color: #c41e3a;
+            text-decoration: none;
+        }
+
+        .legal_footer a:hover {
+            text-decoration: underline;
+        }
+
+        .final-message {
+            background-color: #e8f5e8;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #c41e3a;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">قلعة الصمود</h1>
+            <h2 class="subtitle">دليل التعافي من صدمة الحرب</h2>
+            <h3 class="subtitle">عندما يصبح البيت سجناً والسجن بيتاً: بناء التحرر الداخلي</h3>
+            <p class="attribution">مُكيّف للناجين الفلسطينيين من الحرب</p>
+        </div>
+
+        <div class="back-navigation">
+            <a href="../landing.html" class="back-button">← العودة إلى الصفحة الرئيسية</a>
+        </div>
+
+        <div class="section">
+            <h1>المقدمة: عندما يصبح البقاء مقاومة</h1>
+            <div class="quote">
+                "لم تكن هناك لحظة واحدة توقفت فيها فلسطين عن كونها حرة وأصبحت سجناً. كان هناك شعب قرر أنه حتى في السجن، سيبقى فلسطينياً."
+            </div>
+
+            <p>يبرز هذا الدليل من فهم أن الصدمة الفلسطينية ليست حدثاً بل حالة. إنها ليست شيئاً حدث بل شيء يستمر في الحدوث. عندما يكون وجودك مقاومة، وذاكرتك تمرد، وبقاؤك ذاته يهدد من يريدون محوك، تصبح أساليب العلاج التقليدية شكلاً آخر من أشكال الاستعمار.</p>
+
+            <p>هذا الدليل موجود لأن الصمود - المثابرة الثابتة - يتطلب أدوات تضاهي قوته. لأن الشفاء لا يمكن أن ينتظر العدالة، حتى وإن كان الشفاء يعمل نحو العدالة. لأن الصدمة التي تسعى لكسر الروح الفلسطينية يجب أن تواجه العمارة التي تحافظ عليها.</p>
+
+            <h3>لمن هذا الدليل</h3>
+            <p><strong>الفلسطينيون تحت الاحتلال</strong> في غزة والضفة الغربية والقدس</p>
+            <p><strong>اللاجئون الفلسطينيون</strong> في المخيمات والمنفى والشتات</p>
+            <p><strong>المواطنون الفلسطينيون في إسرائيل</strong> الذين يتعاملون مع الهوية تحت الاستعمار الاستيطاني</p>
+            <p><strong>الفلسطينيون من الجيل الثالث والرابع</strong> الذين يحملون صدمة موروثة</p>
+            <p><strong>العائلات الفلسطينية</strong> المنفصلة بالجدران والحدود والاعتقال</p>
+            <p><strong>أي شخص يُجرّم وجوده</strong> وتُمرض مقاومته</p>
+
+            <div class="warning">
+                <h4>كلمة حول الأمان والخطر المستمر</h4>
+                <p>يقر هذا الدليل بأنك قد تواجه حالياً عنفاً يومياً، أو مراقبة، أو تقييد حركة، أو هدم منازل، أو اعتقال، أو التهديد المستمر بذلك. نحن لا نفترض وجود الأمان أو أن الصدمة قد انتهت. نحن نعمل مع ما هو الواقع الفلسطيني، وليس ما يعتقد الغرباء أنه يجب أن يكون.</p>
+                <p><strong>إذا كنت في خطر جسدي فوري، أعط الأولوية لسلامتك الجسدية. هذا الدليل سيبقى هنا عندما تستطيع التنفس.</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الأول: فهم إشارتك تحت الاحتلال</h1>
+            
+            <h2>الفصل الأول: اليوم الذي أصبحت فيه الحرية ذكرى</h2>
+            <div class="quote">
+                "هذا ليس عن اليوم الذي بدأ فيه الاحتلال. هذا عن اليوم الذي أدركت فيه أنك وُلدت في المقاومة وستموت في المقاومة، وأن المقاومة ذاتها ستكون ميراثك."
+            </div>
+
+            <p>الصدمة الفلسطينية غالباً ما تبدأ قبل الولادة، في القصص التي تحكيها أمهاتنا بينما ننمو في أرحامهن، في تأخير الحواجز التي تعقد ولادتنا، في الواقع أن وجودنا سياسي بالفعل قبل أن نأخذ أنفاسنا الأولى.</p>
+
+            <div class="exercise">
+                <h4>تمرين 1.1: ميراثك الفلسطيني</h4>
+                <div class="exercise-prompt">أول مرة فهمت فيها أن كوني فلسطينياً يعني شيئاً مختلفاً:</div>
+                <div class="exercise-prompt">ما أخبرتني به عائلتي عن فلسطين قبل أن أستطيع الفهم:</div>
+                <div class="exercise-prompt">أول مرة رأيت فيها أن فلسطين أُخذت منا:</div>
+                <div class="exercise-prompt">كيف تعلم جسدي عن الاحتلال قبل أن يقبل عقلي ذلك:</div>
+                <div class="exercise-prompt">ما ورثته لم يكن ملكية بل مسؤولية:</div>
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 1.2: إشارة الصدمة الاستعمارية</h4>
+                <p>الصدمة الاستعمارية تحمل معلومات محددة حول ما يحدث للشعوب التي ترفض الاختفاء.</p>
+                <div class="exercise-prompt">صدمتي الفلسطينية تعلمني عن:</div>
+                <div class="exercise-prompt">النمط الذي تتخذه مقاومتي:</div>
+                <div class="exercise-prompt">ما يحميه جهازي العصبي المستعمر:</div>
+                <div class="exercise-prompt">ما يسعى إليه جهازي العصبي المستعمر:</div>
+                <div class="exercise-prompt">كيف أحمل فلسطين الآن:</div>
+            </div>
+
+            <h2>الفصل الثاني: لماذا علاج التحرير لا يمكن أن ينتظر التحرير</h2>
+            <div class="quote">
+                "معظم الشفاء يفترض أن القمع قد انتهى. الشفاء الفلسطيني يعرف أن التحرير يخلق ظروف الشفاء، والشفاء يخلق ظروف التحرير."
+            </div>
+
+            <p>العلاج التقليدي للصدمة يفترض الشفاء الفردي داخل أنظمة عادلة. الصدمة الفلسطينية تتطلب شفاءً جماعياً داخل أنظمة مصممة لتدمير الوجود الفلسطيني. نحن نشفى لنقاوم، ونقاوم لنشفى.</p>
+
+            <h3>لماذا الأساليب المعيارية لا تستطيع معالجة الصدمة الاستعمارية:</h3>
+            <p>1. <strong>تفرد القمع المنهجي</strong> (تجعلك مسؤولاً عن الشفاء من العنف المستمر)</p>
+            <p>2. <strong>تمرض الغضب المبرر</strong> (غضبك من الظلم ليس اضطراباً)</p>
+            <p>3. <strong>تشجع التكيف مع الظلم</strong> (تطلب منك "التأقلم" مع ما لا يُطاق)</p>
+            <p>4. <strong>تتجاهل النقل الجيلي</strong> (الصدمة التي تسافر عبر الأنساب والقصص)</p>
+            <p>5. <strong>تفصل الشفاء عن العدالة</strong> (كما لو أنك تستطيع أن تكون كاملاً بينما شعبك يبقى مسجوناً)</p>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الثاني: بناء قلعة الصمود</h1>
+            
+            <h2>الفصل الرابع: المنطق الحلزوني™ - لغة للعقول المحاصرة</h2>
+            <div class="quote">
+                "تذهب عميقاً في الجرح الذي فُتح قبل أن تولد. تصعد حلزونياً عبر أجيال من المقاومة. تظهر حاملاً مفاتيح كل البيوت التي دمروها."
+            </div>
+
+            <p>المنطق الخطي يقول اشف بمراحل، اتراك الماضي خلفك، ركز على تعافيك الفردي. المنطق الحلزوني™ للفلسطينيين يقول: تتحرك حلزونياً عبر الذاكرة الجيلية، تحمل حكمة المقاومة الأسلافية للأمام، تشفى بينما تحمل كل فلسطين في قلبك.</p>
+
+            <h3>الحركات الثلاث للمنطق الحلزوني الفلسطيني™:</h3>
+            <p><strong>اذهب عميقاً:</strong> التوجه نحو الميراث الكامل للألم والقوة الفلسطينية</p>
+            <p><strong>اصعد حلزونياً:</strong> التحرك عبر التعقيد عبر الأجيال، حاملاً حكمة المقاومة للأعلى</p>
+            <p><strong>اظهر حاملاً:</strong> العودة للعالم مشفياً لكن غير ناسٍ، محرراً لكن ما زال يقاتل</p>
+
+            <h2>الفصل الخامس: تمرين برج المراقبة - العثور على حارس الذاكرة</h2>
+            <div class="quote">
+                "شخص ما كان يراقب كل ما حاولوا جعلك تنساه. شخص ما كان يحرس مفتاح فلسطين في جيبك، طعم فلسطين في فمك، أغاني فلسطين في عظامك."
+            </div>
+
+            <p>هذا التمرين يربطك بالجزء منك الذي كان يحمي الذاكرة والهوية الفلسطينية عبر أجيال من محاولات المحو.</p>
+
+            <div class="exercise">
+                <h4>تمرين 5.1: لقاء الحارس الفلسطيني</h4>
+                <p>أغمض عينيك. تخيل شخصاً كان يراقب روحك الفلسطينية - ربما على سطح في القدس المحتلة، أو عند مدخل مخيم لاجئين، أو يحرس شجرة زيتون مُعدة للاقتلاع.</p>
+                <div class="exercise-prompt">اسم حارسي:</div>
+                <div class="exercise-prompt">ما يحمونه بداخلي:</div>
+                <div class="exercise-prompt">كم من الوقت كانوا يراقبون:</div>
+                <div class="exercise-prompt">مما يحرسون ضده:</div>
+                <div class="exercise-prompt">كيف يبقون الذاكرة الفلسطينية حية في:</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الثالث: العيش في قلعتك</h1>
+            
+            <h2>الفصل السابع: الطقوس كمقاومة - خلق مساحة مقدسة في مساحة محتلة</h2>
+            <div class="quote">
+                "كل تقليد فلسطيني تحافظ عليه تحت الاحتلال هو عمل مقاومة. كل زيتونة تقطفها، كل أغنية تغنيها، كل مفتاح تحتفظ به - هذه جدران القلعة."
+            </div>
+
+            <p>عندما يسعى الاحتلال لمحو الثقافة الفلسطينية، تصبح كل ممارسة ثقافية شكلاً من أشكال المقاومة وأداة للشفاء.</p>
+
+            <div class="exercise">
+                <h4>تمرين 7.1: الطقوس الفلسطينية التي تحافظ عليها</h4>
+                <div class="exercise-prompt">التقاليد الفلسطينية التي أستمر في اتباعها رغم الاحتلال:</div>
+                <div class="exercise-prompt">كيف أحتفل بالأعياد الفلسطينية تحت القيود:</div>
+                <div class="exercise-prompt">الأطعمة الفلسطينية التي أحضرها أو أبحث عنها:</div>
+                <div class="exercise-prompt">الأغاني الفلسطينية التي أغنيها أو أستمع إليها:</div>
+                <div class="exercise-prompt">كيف أحافظ على اللغة العربية:</div>
+            </div>
+
+            <h2>الفصل الثامن: التكامل تحت الاحتلال - فن البقاء بينما يُسرق كل شيء</h2>
+            <div class="quote">
+                "التكامل للفلسطينيين ليس نسيان الاحتلال. إنه تعلم كيف تكون فلسطينياً في جميع الظروف، مقموعاً لكن غير منكسر، منفياً لكن غير مشرد أبداً لأن فلسطين تسافر في القلب."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 8.2: حمل فلسطين للأمام</h4>
+                <div class="exercise-prompt">كيف أحمل الهوية الفلسطينية في الحياة اليومية:</div>
+                <div class="exercise-prompt">طرق أكرم بها فلسطين لا تتطلب الحضور الجسدي:</div>
+                <div class="exercise-prompt">كيف أساهم في الاستمرارية الفلسطينية:</div>
+                <div class="exercise-prompt">ما أريد أن يرثه الأطفال الفلسطينيون مني:</div>
+                <div class="exercise-prompt">كيف يخدم شفائي التحرير الفلسطيني:</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الخاتمة: قلعة الصمود تدوم</h1>
+            <div class="quote">
+                "فلسطين تدوم في كل قلعة من كل قلب فلسطيني. شفاؤك هو الشفاء الفلسطيني. صمودك هو النصر الفلسطيني."
+            </div>
+
+            <p>لقد بنيت شيئاً بداخلك لا يمكن لأي احتلال تدميره، ولا يمكن لأي منفى فصله عن مصدره، ولا يمكن لأي جدار احتواؤه. تحمل فلسطين ليس فقط كذكرى بل كثقافة حية، ليس فقط كصدمة بل كقوة، ليس فقط كخسارة بل كحب يحرر.</p>
+
+            <h3>تذكر:</h3>
+            <p>الشفاء الفلسطيني يحدث أثناء النضال الفلسطيني</p>
+            <p>يمكنك أن تكون مجروحاً ومقاوماً في نفس الوقت</p>
+            <p>هويتك الفلسطينية تتجاوز أي حدود أو حواجز</p>
+            <p>شفاؤك يخدم التحرير الفلسطيني</p>
+            <p>فلسطين تعيش فيك</p>
+            <p>أنت تمارس الصمود</p>
+
+            <div class="final-message">
+                <p><strong>قلعة الصمود تدوم.</strong></p>
+                <p><strong>فلسطين تدوم.</strong></p>
+                <p><strong>أنت تدوم.</strong></p>
+                <p><em>من النهر إلى البحر، فلسطين ستتحرر.</em></p>
+            </div>
+
+            <p>للحصول على دعم المجتمع الفلسطيني والموارد: تواصل مع المنظمات الفلسطينية المحلية، والمراكز الثقافية الفلسطينية، وشبكات التضامن في جميع أنحاء العالم.</p>
+            <p><strong>إذا ساعدك هذا الدليل، يرجى مشاركته مع فلسطينيين آخرين يحتاجون قلعتهم الخاصة.</strong></p>
+            <p><em>ما أنتوا لوحدكم.</em> (لستم وحدكم.)</p>
+        </div>
+
+        <footer class="legal_footer">
+            <p><strong>© 2025 Jimmy Thornburg. All rights reserved.</strong></p>
+            <p>This site and its contents are protected under U.S. and international IP law.</p>
+            <p>Use of any frameworks or branded systems is subject to <a href="/legal/legal.html">full licensing terms</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>
