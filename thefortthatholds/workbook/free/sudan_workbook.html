@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قلعة الصمود السودانية: دليل التعافي من صدمة الحرب والنزوح</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Tahoma', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #1e8449;
+        }
+
+        .title {
+            font-size: 2.5em;
+            color: #1e8449;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .attribution {
+            font-size: 1em;
+            color: #888;
+            font-style: italic;
+        }
+
+        .sudan-colors {
+            height: 12px;
+            background: linear-gradient(to left, #ce1126 25%, #ffffff 25%, #ffffff 50%, #000000 50%, #000000 75%, #1e8449 75%);
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .back-navigation {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #666;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h1 {
+            color: #1e8449;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #1e8449;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #1e8449;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .section h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .quote {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-right: 4px solid #1e8449;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .contents {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .contents ul {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .contents li {
+            margin-bottom: 8px;
+            padding: 5px;
+        }
+
+        .contents li:before {
+            content: "◄ ";
+            color: #1e8449;
+            font-weight: bold;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .warning h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #e8f5e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid #1e8449;
+        }
+
+        .exercise h4 {
+            color: #1e8449;
+            margin-bottom: 15px;
+        }
+
+        .exercise p {
+            margin-bottom: 10px;
+        }
+
+        .exercise-prompt {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .unity-message {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #1e8449;
+        }
+
+        .legal_footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            border-top: 3px solid #1e8449;
+            background-color: #f9f9f9;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .legal_footer p {
+            margin-bottom: 10px;
+        }
+
+        .legal_footer a {
+            color: #1e8449;
+            text-decoration: none;
+        }
+
+        .legal_footer a:hover {
+            text-decoration: underline;
+        }
+
+        .final-message {
+            background-color: #e8f5e8;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #1e8449;
+        }
+
+        .language-note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">قلعة الصمود السودانية</h1>
+            <div class="sudan-colors"></div>
+            <h2 class="subtitle">دليل التعافي من صدمة الحرب والنزوح</h2>
+            <h3 class="subtitle">عندما يصبح كل مكان مؤقت: بناء الاستقرار الداخلي</h3>
+            <p class="attribution">مُكيّف للناجين السودانيين من الحرب والنزوح</p>
+        </div>
+
+        <div class="back-navigation">
+            <a href="../landing.html" class="back-button">← العودة إلى الصفحة الرئيسية</a>
+        </div>
+
+        <div class="language-note">
+            <p><strong>ملاحظة لغوية:</strong> هذا المورد متاح باللغة العربية السودانية كلغة تواصل مشتركة لجميع السودانيين المتضررين من الأزمة، مع تقدير عميق لثراء التنوع اللغوي في السودان الذي يضم أكثر من 400 لغة.</p>
+        </div>
+
+        <div class="unity-message">
+            <p><strong>هذا المورد مخصص لكل السودانيين</strong></p>
+            <p>من دارفور إلى الخرطوم، من الشرق إلى الغرب، من الشمال إلى الجنوب - كل سوداني يستحق الشفاء والكرامة</p>
+            <p>نحن نستخدم العربية السودانية كلغة تواصل مشتركة في هذه الأزمة، مع الاحترام العميق لجميع اللغات والثقافات السودانية</p>
+        </div>
+
+        <div class="section">
+            <h1>المقدمة: عندما يصبح كل مكان مؤقت</h1>
+            <div class="quote">
+                "لم تكن هناك لحظة واحدة توقف فيها السودان عن كونه وطناً وأصبح ذكرى. كان هناك شعب قرر أنه مهما تشردوا، مهما نزحوا، سيبقون سودانيين."
+            </div>
+
+            <p>هذا الدليل يخرج من فهم أن الصدمة السودانية ليست حدثاً واحداً بل تراكم عقود من الصراع والنزوح والفقدان. عندما تترك بيتك حاملاً فقط ما تستطيع حمله، عندما تفقد أفراد العائلة في العنف، عندما تجد نفسك في مخيم لاجئين أو مدينة غريبة، تحتاج لأدوات تعافي تفهم أن البقاء نفسه مقاومة.</p>
+
+            <p>هذا الدليل موجود لأن السودانيين يستحقون أدوات شفاء تضاهي قوة صمودهم. لأن الشفاء لا يمكن أن ينتظر انتهاء الحرب، والأمل لا يمكن أن ينتظر العودة للوطن.</p>
+
+            <h3>لمن هذا الدليل</h3>
+            <p><strong>النازحون داخل السودان</strong> الذين فقدوا بيوتهم ومجتمعاتهم</p>
+            <p><strong>اللاجئون السودانيون</strong> في تشاد ومصر وجنوب السودان وأوغندا وإثيوبيا</p>
+            <p><strong>العائلات المفصولة</strong> بسبب الحرب والحدود</p>
+            <p><strong>الناجون من العنف</strong> في دارفور والخرطوم وكردفان والنيل الأزرق</p>
+            <p><strong>الأطفال والشباب</strong> الذين نشأوا في ظل الصراع</p>
+            <p><strong>النساء والفتيات</strong> اللواتي واجهن عنفاً قائماً على النوع</p>
+            <p><strong>كل سوداني</strong> يحمل ألم شعبه في قلبه</p>
+
+            <div class="warning">
+                <h4>كلمة حول الأمان والخطر المستمر</h4>
+                <p>هذا الدليل يقر بأنك قد تواجه حالياً عنفاً مستمراً، أو نزوحاً، أو انعدام أمن غذائي، أو فصلاً عن العائلة. نحن لا نفترض أن الأمان متوفر أو أن الأزمة انتهت. نحن نعمل مع واقع الحياة السودانية الآن، وليس مع ما نتمنى أن يكون.</p>
+                <p><strong>إذا كنت في خطر جسدي فوري، أعط الأولوية لسلامتك الجسدية. هذا الدليل سيبقى هنا عندما تستطيع التنفس.</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الأول: فهم إشارتك في الأزمة السودانية</h1>
+            
+            <h2>الفصل الأول: اليوم الذي تغير كل شيء</h2>
+            <div class="quote">
+                "هذا ليس عن اليوم الذي بدأت فيه الحرب الأخيرة. هذا عن اليوم الذي أدركت فيه أنك ستحمل السودان في قلبك أينما ذهبت."
+            </div>
+
+            <p>الصدمة السودانية لها طبقات - الصراع الحالي مبني على عقود من الحروب السابقة. بعضنا يحمل ذكريات دارفور، بعضنا يحمل ألم انفصال الجنوب، بعضنا عاش كل الحروب. اليوم، نحن نواجه أزمة جديدة تضاف لكل ما مررنا به.</p>
+
+            <div class="exercise">
+                <h4>تمرين 1.1: قصة النزوح السودانية</h4>
+                <div class="exercise-prompt">اللحظة التي أدركت فيها أن كل شيء تغير:</div>
+                <div class="exercise-prompt">ما اضطررت لتركه خلفك:</div>
+                <div class="exercise-prompt">مَن فقدت في هذه الأزمة:</div>
+                <div class="exercise-prompt">أول مكان وجدت فيه الأمان بعد النزوح:</div>
+                <div class="exercise-prompt">كيف تعلم جسدك أن يعيش في حالة عدم يقين:</div>
+                <div class="exercise-prompt">ما ما زلت تحمله من السودان رغم النزوح:</div>
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 1.2: إشارة الصدمة السودانية</h4>
+                <p>الصدمة السودانية تحمل معلومات عن ما يحتاجه الناس للبقاء عندما يفقدون كل شيء مألوف.</p>
+                <div class="exercise-prompt">صدمتي السودانية تعلمني عن:</div>
+                <div class="exercise-prompt">كيف أحمي نفسي في أماكن غريبة:</div>
+                <div class="exercise-prompt">ما يحميه قلبي السوداني رغم كل شيء:</div>
+                <div class="exercise-prompt">كيف أبقى مرتبطاً بهويتي السودانية:</div>
+                <div class="exercise-prompt">قوتي التي اكتشفتها من خلال النجاة:</div>
+            </div>
+
+            <h2>الفصل الثاني: لماذا العلاج التقليدي لا يلمس الصدمة السودانية</h2>
+            <div class="quote">
+                "معظم العلاج يفترض أن لديك بيت آمن للعودة إليه. الشفاء السوداني يعرف أن البيت أصبح في القلب، والأمان شيء نبنيه بأنفسنا."
+            </div>
+
+            <p>العلاج التقليدي للصدمة صُمم للناس الذين يعيشون في استقرار. الصدمة السودانية تتطلب شفاءً يفهم النزوح المستمر، فقدان الوطن، العيش في خيم، البحث عن الطعام، القلق على الأهل المفقودين.</p>
+
+            <h3>لماذا الأساليب المعيارية لا تعمل مع الصدمة السودانية:</h3>
+            <p>1. <strong>تفترض وجود مكان آمن للعودة إليه</strong> (لكن بيوتنا قد تكون مدمرة)</p>
+            <p>2. <strong>تركز على الشفاء الفردي</strong> (لكن صدمتنا جماعية وقبلية)</p>
+            <p>3. <strong>تطلب "تجاوز" الماضي</strong> (لكن ماضينا جزء من هويتنا)</p>
+            <p>4. <strong>تتجاهل الصدمة التاريخية</strong> (السودان يعيش دورات من الصراع منذ عقود)</p>
+            <p>5. <strong>لا تفهم صدمة النزوح</strong> (فقدان المكان والمجتمع والهوية المكانية)</p>
+
+            <h2>الفصل الثالث: صدمتك من الحرب، لكن نجاتك سودانية</h2>
+            <div class="quote">
+                "لم تختر الحرب. اخترت البقاء. اخترت حماية من تحب. اخترت أن تبقى سودانياً رغم كل ما حاول كسرك. هذا الاختيار هو قوتك."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 3.1: الصمود السوداني</h4>
+                <div class="exercise-prompt">ما فُعل بالشعب السوداني لم يكن ذنبنا:</div>
+                <div class="exercise-prompt">ما فُعل بي شخصياً لم يكن ذنبي:</div>
+                <div class="exercise-prompt">كيف اخترت أن أحمي من أحب:</div>
+                <div class="exercise-prompt">القوة التي اكتشفتها في نفسي خلال الأزمة:</div>
+                <div class="exercise-prompt">كيف ساعدت سودانيين آخرين على النجاة:</div>
+                <div class="exercise-prompt">كيف أحافظ على هويتي السودانية في النزوح:</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الثاني: بناء قلعة الصمود السودانية</h1>
+            
+            <h2>الفصل الرابع: المنطق الحلزوني™ - لغة للعقول المشردة</h2>
+            <div class="quote">
+                "تذهب عميقاً في ألم النزوح. تصعد حلزونياً عبر ذكريات الوطن والأمل. تظهر حاملاً السودان كله في قلبك."
+            </div>
+
+            <p>المنطق الخطي يقول: انسى الماضي، ابدأ جديداً، تأقلم مع المكان الجديد. المنطق الحلزوني™ للسودانيين يقول: تحرك عبر الألم والذكرى، احمل وطنك معك، اشف بينما تحافظ على هويتك.</p>
+
+            <h3>الحركات الثلاث للمنطق الحلزوني السوداني™:</h3>
+            <p><strong>اذهب عميقاً:</strong> واجه كامل الفقدان - البيت، الأهل، الأمان، الحلم السوداني</p>
+            <p><strong>اصعد حلزونياً:</strong> تحرك عبر التعقيد، حاملاً ثقافتك وقيمك معك</p>
+            <p><strong>اظهر حاملاً:</strong> عد للعالم مشفياً لكن ما زلت سودانياً، قوياً لكن تحمل الذكرى</p>
+
+            <h2>الفصل الخامس: تمرين برج المراقبة - العثور على حارس الهوية</h2>
+            <div class="quote">
+                "شخص ما كان يحرس روحك السودانية عبر كل هذا العنف والنزوح. شخص ما حافظ على نيلك الداخلي، على أغانيك، على كرمك وأصالتك."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 5.1: لقاء الحارس السوداني</h4>
+                <p>أغمض عينيك. تخيل شخصاً كان يحرس هويتك السودانية - ربما يقف على ضفة النيل في ذاكرتك، أو في سوق الخرطوم، أو تحت شجرة الهجليج.</p>
+                <div class="exercise-prompt">اسم حارسي السوداني:</div>
+                <div class="exercise-prompt">ما يحرسونه في روحي:</div>
+                <div class="exercise-prompt">كيف حافظوا على سودانيتي خلال النزوح:</div>
+                <div class="exercise-prompt">الذكريات السودانية التي أنقذوها:</div>
+                <div class="exercise-prompt">كيف يذكرونني بمن أكون:</div>
+            </div>
+
+            <h2>الفصل السادس: سيادة الأصوات - لقاء مجلس النجاة السوداني</h2>
+            <div class="quote">
+                "النزوح السوداني يخلق أصواتاً - من غادر، من بقى، من يبحث عن الأهل، من يحافظ على التقاليد، من يتأقلم. كل صوت سوداني أصيل."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 6.1: رسم الأصوات السودانية</h4>
+                <div class="exercise-prompt">الصوت الذي اتخذ قرار المغادرة يبدو كالتالي:</div>
+                <div class="exercise-prompt">الصوت الذي يحن للوطن يبدو كالتالي:</div>
+                <div class="exercise-prompt">الصوت الذي يحافظ على التقاليد السودانية يبدو كالتالي:</div>
+                <div class="exercise-prompt">الصوت الذي يتأقلم مع المكان الجديد يبدو كالتالي:</div>
+                <div class="exercise-prompt">الصوت الذي يقلق على الأهل المفقودين يبدو كالتالي:</div>
+                <div class="exercise-prompt">الصوت الذي يحافظ على الأمل يبدو كالتالي:</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الثالث: العيش في قلعتك</h1>
+            
+            <h2>الفصل السابع: الطقوس كهوية - الحفاظ على السودان في الغربة</h2>
+            <div class="quote">
+                "كل تقليد سوداني تحافظ عليه في النزوح هو انتصار على المحو. كل أكلة تطبخها، كل أغنية تغنيها، كل حكاية تحكيها - هذه هي جدران القلعة."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 7.1: الطقوس السودانية في النزوح</h4>
+                <div class="exercise-prompt">التقاليد السودانية التي أحافظ عليها:</div>
+                <div class="exercise-prompt">الأكلات السودانية التي أطبخها أو أبحث عنها:</div>
+                <div class="exercise-prompt">الأغاني السودانية التي أستمع إليها:</div>
+                <div class="exercise-prompt">اللهجة السودانية التي أتحدث بها:</div>
+                <div class="exercise-prompt">كيف أعلم أطفالي عن السودان:</div>
+                <div class="exercise-prompt">الطرق التي أتواصل بها مع سودانيين آخرين:</div>
+            </div>
+
+            <h2>الفصل الثامن: التكامل في النزوح - فن البقاء بينما تحمل الوطن</h2>
+            <div class="quote">
+                "التكامل للسودانيين ليس نسيان السودان. إنه تعلم كيف تكون سودانياً في أي مكان، مشرداً لكن غير منكسر، بعيداً لكن القلب في الخرطوم."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 8.1: التوازن في النزوح</h4>
+                <div class="exercise-prompt">أن أكون متكاملاً كسوداني في النزوح يعني:</div>
+                <div class="exercise-prompt">أعرف أنني أدمج تجربة النزوح عندما:</div>
+                <div class="exercise-prompt">يمكنني أن أكون حزيناً على الوطن و:</div>
+                <div class="exercise-prompt">يمكنني أن أكون متأقلماً و:</div>
+                <div class="exercise-prompt">يمكنني أن أكون خائفاً و:</div>
+                <div class="exercise-prompt">كيف أحمل السودان للمستقبل:</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الجزء الرابع: بروتوكولات النجاة والمستقبل</h1>
+            
+            <h2>الفصل الحادي عشر: بروتوكولات الأزمة - عندما تضغط الذكريات</h2>
+            <div class="quote">
+                "أحياناً الضغط خارجي - أخبار سيئة من السودان، تمييز، عزلة. أحياناً داخلي - ذنب النجاة، حنين، يأس. للقلعة بروتوكولات للحالتين."
+            </div>
+
+            <div class="exercise">
+                <h4>بروتوكولات الطوارئ للصدمة السودانية</h4>
+                
+                <h3>عندما تأتي أخبار سيئة من السودان:</h3>
+                <p>• توقف عن متابعة الأخبار فوراً</p>
+                <p>• ضع يدك على قلبك: "أنا آمن الآن في هذه اللحظة"</p>
+                <p>• اذكر مكانك الحالي وأمانك</p>
+                <p>• تواصل مع سوداني آخر أو شخص يدعمك</p>
+                <p>• افعل شيئاً سودانياً (اطبخ، اشرب شاي، استمع لموسيقى)</p>
+
+                <h3>عندما يهاجمك ذنب النجاة:</h3>
+                <p>• "نجاتي تخدم السودان"</p>
+                <p>• "أكرم من مات بأن أعيش بكرامة"</p>
+                <p>• "شفائي يساعد سودانيين آخرين"</p>
+                <p>• "أحمل روح السودان للأمام"</p>
+                <p>• ساعد سودانياً آخر بطريقة صغيرة</p>
+
+                <h3>عندما يزيد الحنين للوطن:</h3>
+                <p>• اسمح لنفسك بالحزن - الحنين طبيعي</p>
+                <p>• تحدث مع صور من السودان في ذاكرتك</p>
+                <p>• "السودان يعيش في قلبي"</p>
+                <p>• "أنا سوداني أينما كنت"</p>
+                <p>• خطط لطريقة للعطاء للسودان من مكانك</p>
+            </div>
+
+            <h2>الفصل الثاني عشر: النمو ما وراء النجاة - من القلعة إلى المستقبل</h2>
+            <div class="quote">
+                "النصر الحقيقي على الحرب ليس نسيان ما حدث، بل بناء شيء جميل مما تبقى. شفاؤك يصبح جزءاً من مستقبل السودان."
+            </div>
+
+            <div class="exercise">
+                <h4>تمرين 12.1: تخيل المستقبل السوداني</h4>
+                <div class="exercise-prompt">كيف أريد أن أساهم في إعادة بناء السودان:</div>
+                <div class="exercise-prompt">ما أريد أن أعلمه للأجيال السودانية القادمة:</div>
+                <div class="exercise-prompt">كيف أريد أن أساعد سودانيين آخرين نجوا من الصدمة:</div>
+                <div class="exercise-prompt">الحلم الذي أحمله لسودان المستقبل:</div>
+                <div class="exercise-prompt">كيف يخدم شفائي الشعب السوداني:</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>الخاتمة: قلعة الصمود السودانية تدوم</h1>
+            <div class="quote">
+                "السودان يدوم في قلعة كل قلب سوداني. شفاؤك هو شفاء السودان. صمودك هو انتصار السودان."
+            </div>
+
+            <p>لقد بنيت شيئاً بداخلك لا تستطيع أي حرب تدميره، ولا يمكن لأي نزوح فصله عن جذوره، ولا يمكن لأي لجوء كسره. تحمل السودان ليس فقط كذكرى بل كثقافة حية، ليس فقط كألم بل كقوة، ليس فقط كفقدان بل كحب يستمر.</p>
+
+            <h3>تذكر:</h3>
+            <p>• الشفاء السوداني يحدث في النزوح</p>
+            <p>• يمكنك أن تكون مصدوماً وصامداً في نفس الوقت</p>
+            <p>• هويتك السودانية أكبر من أي مكان جغرافي</p>
+            <p>• شفاؤك يخدم استمرار الشعب السوداني</p>
+            <p>• السودان يعيش فيك</p>
+            <p>• أنت تمارس الصمود</p>
+
+            <div class="final-message">
+                <p><strong>قلعة الصمود السودانية تدوم.</strong></p>
+                <p><strong>السودان يدوم.</strong></p>
+                <p><strong>أنت تدوم.</strong></p>
+                <p><em>السودان فوق الجميع، والوطن في القلب</em></p>
+            </div>
+
+            <p>للحصول على دعم المجتمع السوداني والموارد: تواصل مع المنظمات السودانية المحلية، مراكز اللاجئين السودانيين، والشبكات السودانية في جميع أنحاء العالم.</p>
+            <p><strong>إذا ساعدك هذا الدليل، يرجى مشاركته مع سودانيين آخرين يحتاجون قلعتهم الخاصة.</strong></p>
+            <p><em>ما إنتو لوحدكم. كلنا سودانيين.</em></p>
+        </div>
+
+        <footer class="legal_footer">
+            <p><strong>© 2025 Jimmy Thornburg. All rights reserved.</strong></p>
+            <p>This site and its contents are protected under U.S. and international IP law.</p>
+            <p>Use of any frameworks or branded systems is subject to <a href="/legal/legal.html">full licensing terms</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>
