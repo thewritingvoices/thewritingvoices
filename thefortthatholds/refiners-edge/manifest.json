@@ -2,7 +2,7 @@
   "name": "The Refiner's Edge - AI Editorial Assistant",
   "short_name": "Refiner's Edge",
   "description": "Professional AI-powered editorial assistant with dual-frame editing for technical precision and creative guidance",
-  "start_url": "/",
+  "start_url": "/refiners-edge/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
